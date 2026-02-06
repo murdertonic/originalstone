@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sips:*)",
+      "Bash(for:*)",
+      "Bash(do echo -n \"$f: \")",
+      "Bash(done)",
+      "Bash(do [ -f \"$f\" ])",
+      "Bash(printf:*)",
+      "Bash(python3:*)"
+    ]
+  }
+}

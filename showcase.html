@@ -1,0 +1,1794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrowtown OS-Grey Schist Showcase</title>
+  <meta name="description" content="Arrowtown OS-Grey schist veneer showcase by Original Stone. Modern New Zealand masonry with a refined schist aesthetic.">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1a1a1a;
+      background: #fafafa;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Hero ── */
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      min-height: 400px;
+      max-height: 800px;
+      overflow: hidden;
+      background: #111;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.15) 0%,
+        rgba(0,0,0,0.05) 40%,
+        rgba(0,0,0,0.4) 100%
+      );
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 48px 32px;
+    }
+
+    .hero-overlay h1 {
+      color: #fff;
+      font-size: clamp(32px, 6vw, 56px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .hero-overlay p {
+      color: rgba(255,255,255,0.85);
+      font-size: clamp(16px, 2.5vw, 20px);
+      max-width: 640px;
+      margin-top: 12px;
+      font-weight: 400;
+    }
+
+    /* ── Sections ── */
+
+    .section-heading {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 48px 16px 0;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: #111;
+    }
+
+    .section-heading p {
+      color: #666;
+      margin-top: 8px;
+      font-size: 16px;
+    }
+
+    .divider {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .divider hr {
+      border: none;
+      border-top: 1px solid #e0e0e0;
+      margin: 64px 0 0;
+    }
+
+    /* ── Gallery ── */
+
+    .gallery {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 24px 16px 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 12px;
+    }
+
+    .gallery a {
+      display: block;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #e0e0e0;
+    }
+
+    .gallery img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      height: auto;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.2s ease;
+    }
+
+    .gallery a:hover img {
+      transform: scale(1.02);
+    }
+
+    /* ── CTA ── */
+
+    .cta {
+      max-width: 720px;
+      margin: 80px auto;
+      padding: 48px 32px;
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .cta p {
+      color: #666;
+      margin-bottom: 24px;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 12px 32px;
+      background: #1a1a1a;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 500;
+      font-size: 15px;
+      transition: background 0.2s ease;
+    }
+
+    .cta a:hover {
+      background: #333;
+    }
+
+    footer {
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 14px;
+      color: #999;
+      border-top: 1px solid #e8e8e8;
+      background: #fff;
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        height: 50vh;
+        min-height: 300px;
+      }
+
+      .hero-overlay {
+        padding: 32px 16px;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 8px;
+        padding: 16px 8px 0;
+      }
+
+      .section-heading {
+        padding: 32px 12px 0;
+      }
+
+      .cta {
+        margin: 48px 16px;
+        padding: 32px 20px;
+      }
+    }
+
+    /* ── Back to Top ── */
+
+    .back-to-top {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(26, 26, 26, 0.8);
+      color: #fff;
+      font-size: 22px;
+      line-height: 48px;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: background 0.2s ease, opacity 0.2s ease;
+      z-index: 100;
+    }
+
+    .back-to-top:hover {
+      background: rgba(26, 26, 26, 1);
+    }
+
+    @media (max-width: 640px) {
+      .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+        line-height: 42px;
+      }
+    }
+
+    /* ── Lightbox ── */
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      padding: 24px;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 92vw;
+      max-height: 88vh;
+      height: auto;
+      width: auto;
+      border-radius: 6px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      font-size: 36px;
+      line-height: 1;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 300;
+      opacity: 0.9;
+    }
+
+    .lightbox-close:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <!-- ── Hero ── -->
+
+  <div class="hero">
+    <img src="arrowtown-os-grey-schist-showcase-193.jpg" width="4032" height="3024" alt="Completed Arrowtown OS-Grey schist residence with mountain backdrop">
+    <div class="hero-overlay">
+      <h1>Arrowtown OS-Grey Schist</h1>
+      <p>A contemporary schist veneer showcase in Arrowtown, highlighting the refined texture and modern aesthetic of OS-Grey schist.</p>
+    </div>
+  </div>
+
+  <!-- ── Finished Project ── -->
+
+  <div class="section-heading">
+    <h2>Finished Project</h2>
+    <p>The completed Arrowtown residence &mdash; OS-Grey schist in its final setting.</p>
+  </div>
+
+  <section class="gallery">
+    <a href="#img-1" id="thumb-1">
+      <img src="arrowtown-os-grey-schist-showcase-187.jpg" width="4032" height="3024" alt="Completed Arrowtown schist residence, wide exterior view" loading="lazy">
+    </a>
+    <a href="#img-2" id="thumb-2">
+      <img src="arrowtown-os-grey-schist-showcase-188.jpg" width="4032" height="3024" alt="Completed residence with mountain backdrop" loading="lazy">
+    </a>
+    <a href="#img-3" id="thumb-3">
+      <img src="arrowtown-os-grey-schist-showcase-192.jpg" width="4032" height="3024" alt="Finished house exterior, wide landscape view" loading="lazy">
+    </a>
+    <a href="#img-4" id="thumb-4">
+      <img src="arrowtown-os-grey-schist-showcase-193.jpg" width="4032" height="3024" alt="Completed patio with outdoor fire and mountain views" loading="lazy">
+    </a>
+    <a href="#img-5" id="thumb-5">
+      <img src="arrowtown-os-grey-schist-showcase-194.jpg" width="4032" height="3024" alt="Finished residence exterior with schist pillars and patio" loading="lazy">
+    </a>
+    <a href="#img-6" id="thumb-6">
+      <img src="arrowtown-os-grey-schist-showcase-195.jpg" width="4032" height="3024" alt="Completed OS-Grey schist wall texture detail" loading="lazy">
+    </a>
+    <a href="#img-7" id="thumb-7">
+      <img src="arrowtown-os-grey-schist-showcase-196.jpg" width="4032" height="3024" alt="Finished patio with schist feature wall and sliding doors" loading="lazy">
+    </a>
+    <a href="#img-8" id="thumb-8">
+      <img src="arrowtown-os-grey-schist-showcase-197.jpg" width="4032" height="3024" alt="Completed schist corner detail with landscape" loading="lazy">
+    </a>
+    <a href="#img-9" id="thumb-9">
+      <img src="arrowtown-os-grey-schist-showcase-198.jpg" width="4032" height="3024" alt="Finished OS-Grey schist veneer close-up texture" loading="lazy">
+    </a>
+    <a href="#img-10" id="thumb-10">
+      <img src="arrowtown-os-grey-schist-showcase-199.jpg" width="4032" height="3024" alt="Completed entry with schist veneer columns" loading="lazy">
+    </a>
+    <a href="#img-11" id="thumb-11">
+      <img src="arrowtown-os-grey-schist-showcase-202.jpg" width="4032" height="3024" alt="Finished front entry with exposed aggregate path" loading="lazy">
+    </a>
+    <a href="#img-12" id="thumb-12">
+      <img src="arrowtown-os-grey-schist-showcase-203.jpg" width="4032" height="3024" alt="Completed schist wall meeting corner detail" loading="lazy">
+    </a>
+    <a href="#img-13" id="thumb-13">
+      <img src="arrowtown-os-grey-schist-showcase-204.jpg" width="4032" height="3024" alt="Finished garage with schist pillars and gravel driveway" loading="lazy">
+    </a>
+  </section>
+
+  <!-- ── Summer Installation ── -->
+
+  <div class="divider"><hr></div>
+
+  <div class="section-heading">
+    <h2>Summer Installation</h2>
+    <p>Warm-weather stonework &mdash; laying the first courses under Central Otago sun.</p>
+  </div>
+
+  <section class="gallery">
+    <a href="#img-14" id="thumb-14">
+      <img src="arrowtown-os-grey-schist-showcase-1.jpg" width="4032" height="3024" alt="Summer schist installation 1" loading="lazy">
+    </a>
+    <a href="#img-15" id="thumb-15">
+      <img src="arrowtown-os-grey-schist-showcase-2.jpg" width="4032" height="3024" alt="Summer schist installation 2" loading="lazy">
+    </a>
+    <a href="#img-16" id="thumb-16">
+      <img src="arrowtown-os-grey-schist-showcase-3.jpg" width="4032" height="3024" alt="Summer schist installation 3" loading="lazy">
+    </a>
+    <a href="#img-17" id="thumb-17">
+      <img src="arrowtown-os-grey-schist-showcase-4.jpg" width="4032" height="3024" alt="Summer schist installation 4" loading="lazy">
+    </a>
+    <a href="#img-18" id="thumb-18">
+      <img src="arrowtown-os-grey-schist-showcase-5.jpg" width="4032" height="3024" alt="Summer schist installation 5" loading="lazy">
+    </a>
+    <a href="#img-19" id="thumb-19">
+      <img src="arrowtown-os-grey-schist-showcase-6.jpg" width="4032" height="3024" alt="Summer schist installation 6" loading="lazy">
+    </a>
+    <a href="#img-20" id="thumb-20">
+      <img src="arrowtown-os-grey-schist-showcase-7.jpg" width="4032" height="3024" alt="Summer schist installation 7" loading="lazy">
+    </a>
+    <a href="#img-21" id="thumb-21">
+      <img src="arrowtown-os-grey-schist-showcase-8.jpg" width="4032" height="3024" alt="Summer schist installation 8" loading="lazy">
+    </a>
+    <a href="#img-22" id="thumb-22">
+      <img src="arrowtown-os-grey-schist-showcase-9.jpg" width="4032" height="3024" alt="Summer schist installation 9" loading="lazy">
+    </a>
+    <a href="#img-23" id="thumb-23">
+      <img src="arrowtown-os-grey-schist-showcase-10.jpg" width="4032" height="3024" alt="Summer schist installation 10" loading="lazy">
+    </a>
+    <a href="#img-24" id="thumb-24">
+      <img src="arrowtown-os-grey-schist-showcase-11.jpg" width="4032" height="3024" alt="Summer schist installation 11" loading="lazy">
+    </a>
+    <a href="#img-25" id="thumb-25">
+      <img src="arrowtown-os-grey-schist-showcase-12.jpg" width="4032" height="3024" alt="Summer schist installation 12" loading="lazy">
+    </a>
+    <a href="#img-26" id="thumb-26">
+      <img src="arrowtown-os-grey-schist-showcase-13.jpg" width="1652" height="931" alt="Summer schist installation 13" loading="lazy">
+    </a>
+    <a href="#img-27" id="thumb-27">
+      <img src="arrowtown-os-grey-schist-showcase-14.jpg" width="4032" height="3024" alt="Summer schist installation 14" loading="lazy">
+    </a>
+    <a href="#img-28" id="thumb-28">
+      <img src="arrowtown-os-grey-schist-showcase-15.jpg" width="4032" height="3024" alt="Summer schist installation 15" loading="lazy">
+    </a>
+    <a href="#img-29" id="thumb-29">
+      <img src="arrowtown-os-grey-schist-showcase-16.jpg" width="4032" height="3024" alt="Summer schist installation 16" loading="lazy">
+    </a>
+    <a href="#img-30" id="thumb-30">
+      <img src="arrowtown-os-grey-schist-showcase-17.jpg" width="4032" height="3024" alt="Summer schist installation 17" loading="lazy">
+    </a>
+    <a href="#img-31" id="thumb-31">
+      <img src="arrowtown-os-grey-schist-showcase-18.jpg" width="1290" height="2796" alt="Summer schist installation 18" loading="lazy">
+    </a>
+    <a href="#img-32" id="thumb-32">
+      <img src="arrowtown-os-grey-schist-showcase-19.jpg" width="4032" height="3024" alt="Summer schist installation 19" loading="lazy">
+    </a>
+    <a href="#img-33" id="thumb-33">
+      <img src="arrowtown-os-grey-schist-showcase-20.jpg" width="4032" height="3024" alt="Summer schist installation 20" loading="lazy">
+    </a>
+    <a href="#img-34" id="thumb-34">
+      <img src="arrowtown-os-grey-schist-showcase-21.jpg" width="4032" height="3024" alt="Summer schist installation 21" loading="lazy">
+    </a>
+    <a href="#img-35" id="thumb-35">
+      <img src="arrowtown-os-grey-schist-showcase-22.jpg" width="4032" height="3024" alt="Summer schist installation 22" loading="lazy">
+    </a>
+    <a href="#img-36" id="thumb-36">
+      <img src="arrowtown-os-grey-schist-showcase-23.jpg" width="4032" height="3024" alt="Summer schist installation 23" loading="lazy">
+    </a>
+    <a href="#img-37" id="thumb-37">
+      <img src="arrowtown-os-grey-schist-showcase-24.jpg" width="4032" height="3024" alt="Summer schist installation 24" loading="lazy">
+    </a>
+    <a href="#img-38" id="thumb-38">
+      <img src="arrowtown-os-grey-schist-showcase-25.jpg" width="4032" height="3024" alt="Summer schist installation 25" loading="lazy">
+    </a>
+    <a href="#img-39" id="thumb-39">
+      <img src="arrowtown-os-grey-schist-showcase-26.jpg" width="4032" height="3024" alt="Summer schist installation 26" loading="lazy">
+    </a>
+    <a href="#img-40" id="thumb-40">
+      <img src="arrowtown-os-grey-schist-showcase-27.jpg" width="4032" height="3024" alt="Summer schist installation 27" loading="lazy">
+    </a>
+    <a href="#img-41" id="thumb-41">
+      <img src="arrowtown-os-grey-schist-showcase-28.jpg" width="4032" height="3024" alt="Summer schist installation 28" loading="lazy">
+    </a>
+    <a href="#img-42" id="thumb-42">
+      <img src="arrowtown-os-grey-schist-showcase-29.jpg" width="4032" height="3024" alt="Summer schist installation 29" loading="lazy">
+    </a>
+    <a href="#img-43" id="thumb-43">
+      <img src="arrowtown-os-grey-schist-showcase-30.jpg" width="4032" height="3024" alt="Summer schist installation 30" loading="lazy">
+    </a>
+    <a href="#img-44" id="thumb-44">
+      <img src="arrowtown-os-grey-schist-showcase-31.jpg" width="4032" height="3024" alt="Summer schist installation 31" loading="lazy">
+    </a>
+    <a href="#img-45" id="thumb-45">
+      <img src="arrowtown-os-grey-schist-showcase-32.jpg" width="4032" height="3024" alt="Summer schist installation 32" loading="lazy">
+    </a>
+    <a href="#img-46" id="thumb-46">
+      <img src="arrowtown-os-grey-schist-showcase-33.jpg" width="4032" height="3024" alt="Summer schist installation 33" loading="lazy">
+    </a>
+    <a href="#img-47" id="thumb-47">
+      <img src="arrowtown-os-grey-schist-showcase-34.jpg" width="4032" height="3024" alt="Summer schist installation 34" loading="lazy">
+    </a>
+    <a href="#img-48" id="thumb-48">
+      <img src="arrowtown-os-grey-schist-showcase-35.jpg" width="4032" height="3024" alt="Summer schist installation 35" loading="lazy">
+    </a>
+    <a href="#img-49" id="thumb-49">
+      <img src="arrowtown-os-grey-schist-showcase-36.jpg" width="4032" height="3024" alt="Summer schist installation 36" loading="lazy">
+    </a>
+    <a href="#img-50" id="thumb-50">
+      <img src="arrowtown-os-grey-schist-showcase-37.jpg" width="4032" height="3024" alt="Summer schist installation 37" loading="lazy">
+    </a>
+    <a href="#img-51" id="thumb-51">
+      <img src="arrowtown-os-grey-schist-showcase-38.jpg" width="4032" height="3024" alt="Summer schist installation 38" loading="lazy">
+    </a>
+    <a href="#img-52" id="thumb-52">
+      <img src="arrowtown-os-grey-schist-showcase-39.jpg" width="4032" height="3024" alt="Summer schist installation 39" loading="lazy">
+    </a>
+    <a href="#img-53" id="thumb-53">
+      <img src="arrowtown-os-grey-schist-showcase-40.jpg" width="4032" height="3024" alt="Summer schist installation 40" loading="lazy">
+    </a>
+    <a href="#img-54" id="thumb-54">
+      <img src="arrowtown-os-grey-schist-showcase-41.jpg" width="4032" height="3024" alt="Summer schist installation 41" loading="lazy">
+    </a>
+    <a href="#img-55" id="thumb-55">
+      <img src="arrowtown-os-grey-schist-showcase-42.jpg" width="4032" height="3024" alt="Summer schist installation 42" loading="lazy">
+    </a>
+    <a href="#img-56" id="thumb-56">
+      <img src="arrowtown-os-grey-schist-showcase-43.jpg" width="4032" height="3024" alt="Summer schist installation 43" loading="lazy">
+    </a>
+    <a href="#img-57" id="thumb-57">
+      <img src="arrowtown-os-grey-schist-showcase-44.jpg" width="4032" height="3024" alt="Summer schist installation 44" loading="lazy">
+    </a>
+    <a href="#img-58" id="thumb-58">
+      <img src="arrowtown-os-grey-schist-showcase-45.jpg" width="4032" height="3024" alt="Summer schist installation 45" loading="lazy">
+    </a>
+    <a href="#img-59" id="thumb-59">
+      <img src="arrowtown-os-grey-schist-showcase-46.jpg" width="4032" height="3024" alt="Summer schist installation 46" loading="lazy">
+    </a>
+    <a href="#img-60" id="thumb-60">
+      <img src="arrowtown-os-grey-schist-showcase-47.jpg" width="4032" height="3024" alt="Summer schist installation 47" loading="lazy">
+    </a>
+    <a href="#img-61" id="thumb-61">
+      <img src="arrowtown-os-grey-schist-showcase-48.jpg" width="4032" height="3024" alt="Summer schist installation 48" loading="lazy">
+    </a>
+    <a href="#img-62" id="thumb-62">
+      <img src="arrowtown-os-grey-schist-showcase-49.jpg" width="4032" height="3024" alt="Summer schist installation 49" loading="lazy">
+    </a>
+    <a href="#img-63" id="thumb-63">
+      <img src="arrowtown-os-grey-schist-showcase-50.jpg" width="4032" height="3024" alt="Summer schist installation 50" loading="lazy">
+    </a>
+    <a href="#img-64" id="thumb-64">
+      <img src="arrowtown-os-grey-schist-showcase-51.jpg" width="4032" height="3024" alt="Summer schist installation 51" loading="lazy">
+    </a>
+    <a href="#img-65" id="thumb-65">
+      <img src="arrowtown-os-grey-schist-showcase-52.jpg" width="4032" height="3024" alt="Summer schist installation 52" loading="lazy">
+    </a>
+    <a href="#img-66" id="thumb-66">
+      <img src="arrowtown-os-grey-schist-showcase-53.jpg" width="4032" height="3024" alt="Summer schist installation 53" loading="lazy">
+    </a>
+    <a href="#img-67" id="thumb-67">
+      <img src="arrowtown-os-grey-schist-showcase-54.jpg" width="4032" height="3024" alt="Summer schist installation 54" loading="lazy">
+    </a>
+    <a href="#img-68" id="thumb-68">
+      <img src="arrowtown-os-grey-schist-showcase-55.jpg" width="4032" height="3024" alt="Summer schist installation 55" loading="lazy">
+    </a>
+    <a href="#img-69" id="thumb-69">
+      <img src="arrowtown-os-grey-schist-showcase-56.jpg" width="4032" height="3024" alt="Summer schist installation 56" loading="lazy">
+    </a>
+    <a href="#img-70" id="thumb-70">
+      <img src="arrowtown-os-grey-schist-showcase-57.jpg" width="4032" height="3024" alt="Summer schist installation 57" loading="lazy">
+    </a>
+    <a href="#img-71" id="thumb-71">
+      <img src="arrowtown-os-grey-schist-showcase-58.jpg" width="4032" height="3024" alt="Summer schist installation 58" loading="lazy">
+    </a>
+    <a href="#img-72" id="thumb-72">
+      <img src="arrowtown-os-grey-schist-showcase-59.jpg" width="4032" height="3024" alt="Summer schist installation 59" loading="lazy">
+    </a>
+    <a href="#img-73" id="thumb-73">
+      <img src="arrowtown-os-grey-schist-showcase-60.jpg" width="4032" height="3024" alt="Summer schist installation 60" loading="lazy">
+    </a>
+    <a href="#img-74" id="thumb-74">
+      <img src="arrowtown-os-grey-schist-showcase-61.jpg" width="4032" height="3024" alt="Summer schist installation 61" loading="lazy">
+    </a>
+    <a href="#img-75" id="thumb-75">
+      <img src="arrowtown-os-grey-schist-showcase-62.jpg" width="4032" height="3024" alt="Summer schist installation 62" loading="lazy">
+    </a>
+    <a href="#img-76" id="thumb-76">
+      <img src="arrowtown-os-grey-schist-showcase-63.jpg" width="4032" height="3024" alt="Summer schist installation 63" loading="lazy">
+    </a>
+    <a href="#img-77" id="thumb-77">
+      <img src="arrowtown-os-grey-schist-showcase-64.jpg" width="4032" height="3024" alt="Summer schist installation 64" loading="lazy">
+    </a>
+    <a href="#img-78" id="thumb-78">
+      <img src="arrowtown-os-grey-schist-showcase-65.jpg" width="4032" height="3024" alt="Summer schist installation 65" loading="lazy">
+    </a>
+    <a href="#img-79" id="thumb-79">
+      <img src="arrowtown-os-grey-schist-showcase-66.jpg" width="4032" height="3024" alt="Summer schist installation 66" loading="lazy">
+    </a>
+    <a href="#img-80" id="thumb-80">
+      <img src="arrowtown-os-grey-schist-showcase-67.jpg" width="4032" height="3024" alt="Summer schist installation 67" loading="lazy">
+    </a>
+    <a href="#img-81" id="thumb-81">
+      <img src="arrowtown-os-grey-schist-showcase-68.jpg" width="4032" height="3024" alt="Summer schist installation 68" loading="lazy">
+    </a>
+    <a href="#img-82" id="thumb-82">
+      <img src="arrowtown-os-grey-schist-showcase-69.jpg" width="4032" height="3024" alt="Summer schist installation 69" loading="lazy">
+    </a>
+    <a href="#img-83" id="thumb-83">
+      <img src="arrowtown-os-grey-schist-showcase-70.jpg" width="4032" height="3024" alt="Summer schist installation 70" loading="lazy">
+    </a>
+    <a href="#img-84" id="thumb-84">
+      <img src="arrowtown-os-grey-schist-showcase-71.jpg" width="4032" height="3024" alt="Summer schist installation 71" loading="lazy">
+    </a>
+    <a href="#img-85" id="thumb-85">
+      <img src="arrowtown-os-grey-schist-showcase-72.jpg" width="4032" height="3024" alt="Summer schist installation 72" loading="lazy">
+    </a>
+    <a href="#img-86" id="thumb-86">
+      <img src="arrowtown-os-grey-schist-showcase-73.jpg" width="3088" height="2316" alt="Summer schist installation 73" loading="lazy">
+    </a>
+    <a href="#img-87" id="thumb-87">
+      <img src="arrowtown-os-grey-schist-showcase-74.jpg" width="4032" height="3024" alt="Summer schist installation 74" loading="lazy">
+    </a>
+    <a href="#img-88" id="thumb-88">
+      <img src="arrowtown-os-grey-schist-showcase-75.jpg" width="4032" height="3024" alt="Summer schist installation 75" loading="lazy">
+    </a>
+    <a href="#img-89" id="thumb-89">
+      <img src="arrowtown-os-grey-schist-showcase-76.jpg" width="4032" height="3024" alt="Summer schist installation 76" loading="lazy">
+    </a>
+    <a href="#img-90" id="thumb-90">
+      <img src="arrowtown-os-grey-schist-showcase-77.jpg" width="4032" height="3024" alt="Summer schist installation 77" loading="lazy">
+    </a>
+    <a href="#img-91" id="thumb-91">
+      <img src="arrowtown-os-grey-schist-showcase-78.jpg" width="4032" height="3024" alt="Summer schist installation 78" loading="lazy">
+    </a>
+    <a href="#img-92" id="thumb-92">
+      <img src="arrowtown-os-grey-schist-showcase-79.jpg" width="4032" height="3024" alt="Summer schist installation 79" loading="lazy">
+    </a>
+    <a href="#img-93" id="thumb-93">
+      <img src="arrowtown-os-grey-schist-showcase-80.jpg" width="4032" height="3024" alt="Summer schist installation 80" loading="lazy">
+    </a>
+    <a href="#img-94" id="thumb-94">
+      <img src="arrowtown-os-grey-schist-showcase-81.jpg" width="4032" height="3024" alt="Summer schist installation 81" loading="lazy">
+    </a>
+    <a href="#img-95" id="thumb-95">
+      <img src="arrowtown-os-grey-schist-showcase-82.jpg" width="4032" height="3024" alt="Summer schist installation 82" loading="lazy">
+    </a>
+    <a href="#img-96" id="thumb-96">
+      <img src="arrowtown-os-grey-schist-showcase-83.jpg" width="4032" height="3024" alt="Summer schist installation 83" loading="lazy">
+    </a>
+    <a href="#img-97" id="thumb-97">
+      <img src="arrowtown-os-grey-schist-showcase-84.jpg" width="4032" height="3024" alt="Summer schist installation 84" loading="lazy">
+    </a>
+    <a href="#img-98" id="thumb-98">
+      <img src="arrowtown-os-grey-schist-showcase-85.jpg" width="4032" height="3024" alt="Summer schist installation 85" loading="lazy">
+    </a>
+    <a href="#img-99" id="thumb-99">
+      <img src="arrowtown-os-grey-schist-showcase-86.jpg" width="4032" height="3024" alt="Summer schist installation 86" loading="lazy">
+    </a>
+    <a href="#img-100" id="thumb-100">
+      <img src="arrowtown-os-grey-schist-showcase-87.jpg" width="4032" height="3024" alt="Summer schist installation 87" loading="lazy">
+    </a>
+    <a href="#img-101" id="thumb-101">
+      <img src="arrowtown-os-grey-schist-showcase-88.jpg" width="4032" height="3024" alt="Summer schist installation 88" loading="lazy">
+    </a>
+    <a href="#img-102" id="thumb-102">
+      <img src="arrowtown-os-grey-schist-showcase-89.jpg" width="4032" height="3024" alt="Summer schist installation 89" loading="lazy">
+    </a>
+    <a href="#img-103" id="thumb-103">
+      <img src="arrowtown-os-grey-schist-showcase-90.jpg" width="4032" height="3024" alt="Summer schist installation 90" loading="lazy">
+    </a>
+    <a href="#img-104" id="thumb-104">
+      <img src="arrowtown-os-grey-schist-showcase-91.jpg" width="4032" height="3024" alt="Summer schist installation 91" loading="lazy">
+    </a>
+    <a href="#img-105" id="thumb-105">
+      <img src="arrowtown-os-grey-schist-showcase-92.jpg" width="4032" height="3024" alt="Summer schist installation 92" loading="lazy">
+    </a>
+    <a href="#img-106" id="thumb-106">
+      <img src="arrowtown-os-grey-schist-showcase-93.jpg" width="4032" height="3024" alt="Summer schist installation 93" loading="lazy">
+    </a>
+    <a href="#img-107" id="thumb-107">
+      <img src="arrowtown-os-grey-schist-showcase-94.jpg" width="4032" height="3024" alt="Summer schist installation 94" loading="lazy">
+    </a>
+    <a href="#img-108" id="thumb-108">
+      <img src="arrowtown-os-grey-schist-showcase-95.jpg" width="4032" height="3024" alt="Summer schist installation 95" loading="lazy">
+    </a>
+    <a href="#img-109" id="thumb-109">
+      <img src="arrowtown-os-grey-schist-showcase-96.jpg" width="4032" height="3024" alt="Summer schist installation 96" loading="lazy">
+    </a>
+    <a href="#img-110" id="thumb-110">
+      <img src="arrowtown-os-grey-schist-showcase-97.jpg" width="4032" height="3024" alt="Summer schist installation 97" loading="lazy">
+    </a>
+    <a href="#img-111" id="thumb-111">
+      <img src="arrowtown-os-grey-schist-showcase-98.jpg" width="4032" height="3024" alt="Summer schist installation 98" loading="lazy">
+    </a>
+    <a href="#img-112" id="thumb-112">
+      <img src="arrowtown-os-grey-schist-showcase-99.jpg" width="4032" height="3024" alt="Summer schist installation 99" loading="lazy">
+    </a>
+    <a href="#img-113" id="thumb-113">
+      <img src="arrowtown-os-grey-schist-showcase-100.jpg" width="4000" height="1868" alt="Summer schist installation 100" loading="lazy">
+    </a>
+    <a href="#img-114" id="thumb-114">
+      <img src="arrowtown-os-grey-schist-showcase-101.jpg" width="4032" height="3024" alt="Summer schist installation 101" loading="lazy">
+    </a>
+    <a href="#img-115" id="thumb-115">
+      <img src="arrowtown-os-grey-schist-showcase-102.jpg" width="4032" height="3024" alt="Summer schist installation 102" loading="lazy">
+    </a>
+    <a href="#img-116" id="thumb-116">
+      <img src="arrowtown-os-grey-schist-showcase-103.jpg" width="4032" height="3024" alt="Summer schist installation 103" loading="lazy">
+    </a>
+    <a href="#img-117" id="thumb-117">
+      <img src="arrowtown-os-grey-schist-showcase-104.jpg" width="4032" height="3024" alt="Summer schist installation 104" loading="lazy">
+    </a>
+    <a href="#img-118" id="thumb-118">
+      <img src="arrowtown-os-grey-schist-showcase-105.jpg" width="4032" height="3024" alt="Summer schist installation 105" loading="lazy">
+    </a>
+    <a href="#img-119" id="thumb-119">
+      <img src="arrowtown-os-grey-schist-showcase-106.jpg" width="3088" height="2316" alt="Summer schist installation 106" loading="lazy">
+    </a>
+    <a href="#img-120" id="thumb-120">
+      <img src="arrowtown-os-grey-schist-showcase-107.jpg" width="4032" height="3024" alt="Summer schist installation 107" loading="lazy">
+    </a>
+    <a href="#img-121" id="thumb-121">
+      <img src="arrowtown-os-grey-schist-showcase-108.jpg" width="4032" height="3024" alt="Summer schist installation 108" loading="lazy">
+    </a>
+    <a href="#img-122" id="thumb-122">
+      <img src="arrowtown-os-grey-schist-showcase-109.jpg" width="4032" height="3024" alt="Summer schist installation 109" loading="lazy">
+    </a>
+    <a href="#img-123" id="thumb-123">
+      <img src="arrowtown-os-grey-schist-showcase-110.jpg" width="4032" height="3024" alt="Summer schist installation 110" loading="lazy">
+    </a>
+    <a href="#img-124" id="thumb-124">
+      <img src="arrowtown-os-grey-schist-showcase-111.jpg" width="4032" height="3024" alt="Summer schist installation 111" loading="lazy">
+    </a>
+    <a href="#img-125" id="thumb-125">
+      <img src="arrowtown-os-grey-schist-showcase-112.jpg" width="4032" height="3024" alt="Summer schist installation 112" loading="lazy">
+    </a>
+    <a href="#img-126" id="thumb-126">
+      <img src="arrowtown-os-grey-schist-showcase-113.jpg" width="4032" height="3024" alt="Summer schist installation 113" loading="lazy">
+    </a>
+    <a href="#img-127" id="thumb-127">
+      <img src="arrowtown-os-grey-schist-showcase-114.jpg" width="4032" height="3024" alt="Summer schist installation 114" loading="lazy">
+    </a>
+    <a href="#img-128" id="thumb-128">
+      <img src="arrowtown-os-grey-schist-showcase-115.jpg" width="4032" height="3024" alt="Summer schist installation 115" loading="lazy">
+    </a>
+    <a href="#img-129" id="thumb-129">
+      <img src="arrowtown-os-grey-schist-showcase-116.jpg" width="4030" height="3024" alt="Summer schist installation 116" loading="lazy">
+    </a>
+    <a href="#img-130" id="thumb-130">
+      <img src="arrowtown-os-grey-schist-showcase-117.jpg" width="4032" height="3024" alt="Summer schist installation 117" loading="lazy">
+    </a>
+    <a href="#img-131" id="thumb-131">
+      <img src="arrowtown-os-grey-schist-showcase-118.jpg" width="2717" height="2598" alt="Summer schist installation 118" loading="lazy">
+    </a>
+    <a href="#img-132" id="thumb-132">
+      <img src="arrowtown-os-grey-schist-showcase-119.jpg" width="4032" height="3024" alt="Summer schist installation 119" loading="lazy">
+    </a>
+    <a href="#img-133" id="thumb-133">
+      <img src="arrowtown-os-grey-schist-showcase-120.jpg" width="4032" height="3024" alt="Summer schist installation 120" loading="lazy">
+    </a>
+    <a href="#img-134" id="thumb-134">
+      <img src="arrowtown-os-grey-schist-showcase-121.jpg" width="4032" height="3024" alt="Summer schist installation 121" loading="lazy">
+    </a>
+    <a href="#img-135" id="thumb-135">
+      <img src="arrowtown-os-grey-schist-showcase-122.jpg" width="4032" height="3024" alt="Summer schist installation 122" loading="lazy">
+    </a>
+    <a href="#img-136" id="thumb-136">
+      <img src="arrowtown-os-grey-schist-showcase-123.jpg" width="4032" height="3024" alt="Summer schist installation 123" loading="lazy">
+    </a>
+    <a href="#img-137" id="thumb-137">
+      <img src="arrowtown-os-grey-schist-showcase-124.jpg" width="2648" height="4032" alt="Summer schist installation 124" loading="lazy">
+    </a>
+    <a href="#img-138" id="thumb-138">
+      <img src="arrowtown-os-grey-schist-showcase-125.jpg" width="4032" height="3024" alt="Summer schist installation 125" loading="lazy">
+    </a>
+    <a href="#img-139" id="thumb-139">
+      <img src="arrowtown-os-grey-schist-showcase-126.jpg" width="4032" height="3024" alt="Summer schist installation 126" loading="lazy">
+    </a>
+    <a href="#img-140" id="thumb-140">
+      <img src="arrowtown-os-grey-schist-showcase-127.jpg" width="4032" height="3024" alt="Summer schist installation 127" loading="lazy">
+    </a>
+    <a href="#img-141" id="thumb-141">
+      <img src="arrowtown-os-grey-schist-showcase-128.jpg" width="4032" height="3024" alt="Summer schist installation 128" loading="lazy">
+    </a>
+    <a href="#img-142" id="thumb-142">
+      <img src="arrowtown-os-grey-schist-showcase-129.jpg" width="1290" height="2796" alt="Summer schist installation 129" loading="lazy">
+    </a>
+    <a href="#img-143" id="thumb-143">
+      <img src="arrowtown-os-grey-schist-showcase-130.jpg" width="1290" height="2796" alt="Summer schist installation 130" loading="lazy">
+    </a>
+    <a href="#img-144" id="thumb-144">
+      <img src="arrowtown-os-grey-schist-showcase-131.jpg" width="1290" height="2796" alt="Summer schist installation 131" loading="lazy">
+    </a>
+    <a href="#img-145" id="thumb-145">
+      <img src="arrowtown-os-grey-schist-showcase-132.jpg" width="4032" height="3024" alt="Summer schist installation 132" loading="lazy">
+    </a>
+    <a href="#img-146" id="thumb-146">
+      <img src="arrowtown-os-grey-schist-showcase-133.jpg" width="4032" height="3024" alt="Summer schist installation 133" loading="lazy">
+    </a>
+    <a href="#img-147" id="thumb-147">
+      <img src="arrowtown-os-grey-schist-showcase-134.jpg" width="4032" height="3024" alt="Summer schist installation 134" loading="lazy">
+    </a>
+    <a href="#img-148" id="thumb-148">
+      <img src="arrowtown-os-grey-schist-showcase-135.jpg" width="4032" height="3024" alt="Summer schist installation 135" loading="lazy">
+    </a>
+    <a href="#img-149" id="thumb-149">
+      <img src="arrowtown-os-grey-schist-showcase-136.jpg" width="4032" height="3024" alt="Summer schist installation 136" loading="lazy">
+    </a>
+    <a href="#img-150" id="thumb-150">
+      <img src="arrowtown-os-grey-schist-showcase-137.jpg" width="4032" height="3024" alt="Summer schist installation 137" loading="lazy">
+    </a>
+    <a href="#img-151" id="thumb-151">
+      <img src="arrowtown-os-grey-schist-showcase-138.jpg" width="4032" height="3024" alt="Summer schist installation 138" loading="lazy">
+    </a>
+    <a href="#img-152" id="thumb-152">
+      <img src="arrowtown-os-grey-schist-showcase-139.jpg" width="4032" height="3024" alt="Summer schist installation 139" loading="lazy">
+    </a>
+    <a href="#img-153" id="thumb-153">
+      <img src="arrowtown-os-grey-schist-showcase-140.jpg" width="4032" height="3024" alt="Summer schist installation 140" loading="lazy">
+    </a>
+    <a href="#img-154" id="thumb-154">
+      <img src="arrowtown-os-grey-schist-showcase-141.jpg" width="4032" height="3024" alt="Summer schist installation 141" loading="lazy">
+    </a>
+    <a href="#img-155" id="thumb-155">
+      <img src="arrowtown-os-grey-schist-showcase-142.jpg" width="4032" height="3024" alt="Summer schist installation 142" loading="lazy">
+    </a>
+    <a href="#img-156" id="thumb-156">
+      <img src="arrowtown-os-grey-schist-showcase-143.jpg" width="4032" height="3024" alt="Summer schist installation 143" loading="lazy">
+    </a>
+    <a href="#img-157" id="thumb-157">
+      <img src="arrowtown-os-grey-schist-showcase-144.jpg" width="4032" height="3024" alt="Summer schist installation 144" loading="lazy">
+    </a>
+    <a href="#img-158" id="thumb-158">
+      <img src="arrowtown-os-grey-schist-showcase-145.jpg" width="4032" height="3024" alt="Summer schist installation 145" loading="lazy">
+    </a>
+    <a href="#img-159" id="thumb-159">
+      <img src="arrowtown-os-grey-schist-showcase-146.jpg" width="4032" height="3024" alt="Summer schist installation 146" loading="lazy">
+    </a>
+    <a href="#img-160" id="thumb-160">
+      <img src="arrowtown-os-grey-schist-showcase-147.jpg" width="4032" height="3024" alt="Summer schist installation 147" loading="lazy">
+    </a>
+    <a href="#img-161" id="thumb-161">
+      <img src="arrowtown-os-grey-schist-showcase-148.jpg" width="4032" height="3024" alt="Summer schist installation 148" loading="lazy">
+    </a>
+    <a href="#img-162" id="thumb-162">
+      <img src="arrowtown-os-grey-schist-showcase-149.jpg" width="4032" height="3024" alt="Summer schist installation 149" loading="lazy">
+    </a>
+    <a href="#img-163" id="thumb-163">
+      <img src="arrowtown-os-grey-schist-showcase-150.jpg" width="4032" height="3024" alt="Summer schist installation 150" loading="lazy">
+    </a>
+    <a href="#img-164" id="thumb-164">
+      <img src="arrowtown-os-grey-schist-showcase-151.jpg" width="4032" height="3024" alt="Summer schist installation 151" loading="lazy">
+    </a>
+    <a href="#img-165" id="thumb-165">
+      <img src="arrowtown-os-grey-schist-showcase-152.jpg" width="4032" height="3024" alt="Summer schist installation 152" loading="lazy">
+    </a>
+    <a href="#img-166" id="thumb-166">
+      <img src="arrowtown-os-grey-schist-showcase-153.jpg" width="3088" height="2316" alt="Summer schist installation 153" loading="lazy">
+    </a>
+    <a href="#img-167" id="thumb-167">
+      <img src="arrowtown-os-grey-schist-showcase-154.jpg" width="4032" height="3024" alt="Summer schist installation 154" loading="lazy">
+    </a>
+    <a href="#img-168" id="thumb-168">
+      <img src="arrowtown-os-grey-schist-showcase-155.jpg" width="4032" height="3024" alt="Summer schist installation 155" loading="lazy">
+    </a>
+  </section>
+
+  <!-- ── Winter Installation ── -->
+
+  <div class="divider"><hr></div>
+
+  <div class="section-heading">
+    <h2>Winter Installation</h2>
+    <p>Snow on the ranges, frost on the tools &mdash; stonework through the Otago winter.</p>
+  </div>
+
+  <section class="gallery">
+    <a href="#img-169" id="thumb-169">
+      <img src="arrowtown-os-grey-schist-showcase-156.jpg" width="4032" height="3024" alt="Winter schist installation 156" loading="lazy">
+    </a>
+    <a href="#img-170" id="thumb-170">
+      <img src="arrowtown-os-grey-schist-showcase-157.jpg" width="4032" height="3024" alt="Winter schist installation 157" loading="lazy">
+    </a>
+    <a href="#img-171" id="thumb-171">
+      <img src="arrowtown-os-grey-schist-showcase-158.jpg" width="4032" height="3024" alt="Winter schist installation 158" loading="lazy">
+    </a>
+    <a href="#img-172" id="thumb-172">
+      <img src="arrowtown-os-grey-schist-showcase-159.jpg" width="4032" height="3024" alt="Winter schist installation 159" loading="lazy">
+    </a>
+    <a href="#img-173" id="thumb-173">
+      <img src="arrowtown-os-grey-schist-showcase-160.jpg" width="4032" height="3024" alt="Winter schist installation 160" loading="lazy">
+    </a>
+    <a href="#img-174" id="thumb-174">
+      <img src="arrowtown-os-grey-schist-showcase-161.jpg" width="4032" height="3024" alt="Winter schist installation 161" loading="lazy">
+    </a>
+    <a href="#img-175" id="thumb-175">
+      <img src="arrowtown-os-grey-schist-showcase-162.jpg" width="4032" height="3024" alt="Winter schist installation 162" loading="lazy">
+    </a>
+    <a href="#img-176" id="thumb-176">
+      <img src="arrowtown-os-grey-schist-showcase-163.jpg" width="4032" height="3024" alt="Winter schist installation 163" loading="lazy">
+    </a>
+    <a href="#img-177" id="thumb-177">
+      <img src="arrowtown-os-grey-schist-showcase-164.jpg" width="4032" height="3024" alt="Winter schist installation 164" loading="lazy">
+    </a>
+    <a href="#img-178" id="thumb-178">
+      <img src="arrowtown-os-grey-schist-showcase-165.jpg" width="4032" height="3024" alt="Winter schist installation 165" loading="lazy">
+    </a>
+    <a href="#img-179" id="thumb-179">
+      <img src="arrowtown-os-grey-schist-showcase-166.jpg" width="4032" height="3024" alt="Winter schist installation 166" loading="lazy">
+    </a>
+    <a href="#img-180" id="thumb-180">
+      <img src="arrowtown-os-grey-schist-showcase-167.jpg" width="4032" height="3024" alt="Winter schist installation 167" loading="lazy">
+    </a>
+    <a href="#img-181" id="thumb-181">
+      <img src="arrowtown-os-grey-schist-showcase-168.jpg" width="4032" height="3024" alt="Winter schist installation 168" loading="lazy">
+    </a>
+    <a href="#img-182" id="thumb-182">
+      <img src="arrowtown-os-grey-schist-showcase-169.jpg" width="4032" height="3024" alt="Winter schist installation 169" loading="lazy">
+    </a>
+    <a href="#img-183" id="thumb-183">
+      <img src="arrowtown-os-grey-schist-showcase-170.jpg" width="4032" height="3024" alt="Winter schist installation 170" loading="lazy">
+    </a>
+    <a href="#img-184" id="thumb-184">
+      <img src="arrowtown-os-grey-schist-showcase-171.jpg" width="4032" height="3024" alt="Winter schist installation 171" loading="lazy">
+    </a>
+    <a href="#img-185" id="thumb-185">
+      <img src="arrowtown-os-grey-schist-showcase-172.jpg" width="2796" height="1290" alt="Winter schist installation 172" loading="lazy">
+    </a>
+    <a href="#img-186" id="thumb-186">
+      <img src="arrowtown-os-grey-schist-showcase-173.jpg" width="4032" height="3024" alt="Winter schist installation 173" loading="lazy">
+    </a>
+    <a href="#img-187" id="thumb-187">
+      <img src="arrowtown-os-grey-schist-showcase-174.jpg" width="4032" height="3024" alt="Winter schist installation 174" loading="lazy">
+    </a>
+    <a href="#img-188" id="thumb-188">
+      <img src="arrowtown-os-grey-schist-showcase-175.jpg" width="4032" height="3024" alt="Winter schist installation 175" loading="lazy">
+    </a>
+    <a href="#img-189" id="thumb-189">
+      <img src="arrowtown-os-grey-schist-showcase-176.jpg" width="4032" height="3024" alt="Winter schist installation 176" loading="lazy">
+    </a>
+    <a href="#img-190" id="thumb-190">
+      <img src="arrowtown-os-grey-schist-showcase-177.jpg" width="4032" height="3024" alt="Winter schist installation 177" loading="lazy">
+    </a>
+    <a href="#img-191" id="thumb-191">
+      <img src="arrowtown-os-grey-schist-showcase-178.jpg" width="4032" height="3024" alt="Winter schist installation 178" loading="lazy">
+    </a>
+    <a href="#img-192" id="thumb-192">
+      <img src="arrowtown-os-grey-schist-showcase-179.jpg" width="4032" height="3024" alt="Winter schist installation 179" loading="lazy">
+    </a>
+    <a href="#img-193" id="thumb-193">
+      <img src="arrowtown-os-grey-schist-showcase-180.jpg" width="4032" height="3024" alt="Winter schist installation 180" loading="lazy">
+    </a>
+    <a href="#img-194" id="thumb-194">
+      <img src="arrowtown-os-grey-schist-showcase-181.jpg" width="4032" height="3024" alt="Winter schist installation 181" loading="lazy">
+    </a>
+    <a href="#img-195" id="thumb-195">
+      <img src="arrowtown-os-grey-schist-showcase-182.jpg" width="4032" height="3024" alt="Frost on site, Arrowtown winter morning" loading="lazy">
+    </a>
+    <a href="#img-196" id="thumb-196">
+      <img src="arrowtown-os-grey-schist-showcase-183.jpg" width="4032" height="3024" alt="Ice crystals on windscreen, Arrowtown winter" loading="lazy">
+    </a>
+    <a href="#img-197" id="thumb-197">
+      <img src="arrowtown-os-grey-schist-showcase-185.jpg" width="4032" height="3024" alt="Morning frost macro, Arrowtown winter" loading="lazy">
+    </a>
+    <a href="#img-198" id="thumb-198">
+      <img src="arrowtown-os-grey-schist-showcase-186.jpg" width="4032" height="3024" alt="Frost detail on site, Arrowtown winter" loading="lazy">
+    </a>
+    <a href="#img-199" id="thumb-199">
+      <img src="arrowtown-os-grey-schist-showcase-200.jpg" width="4032" height="3024" alt="Winter schist installation 200" loading="lazy">
+    </a>
+    <a href="#img-200" id="thumb-200">
+      <img src="arrowtown-os-grey-schist-showcase-201.jpg" width="4032" height="3024" alt="Winter schist installation 201" loading="lazy">
+    </a>
+    <a href="#img-201" id="thumb-201">
+      <img src="arrowtown-os-grey-schist-showcase-205.jpg" width="4032" height="2268" alt="Winter schist installation 205" loading="lazy">
+    </a>
+    <a href="#img-202" id="thumb-202">
+      <img src="arrowtown-os-grey-schist-showcase-206.jpg" width="4032" height="2268" alt="Winter schist installation 206" loading="lazy">
+    </a>
+    <a href="#img-203" id="thumb-203">
+      <img src="arrowtown-os-grey-schist-showcase-207.jpg" width="4032" height="2268" alt="Winter schist installation 207" loading="lazy">
+    </a>
+    <a href="#img-204" id="thumb-204">
+      <img src="arrowtown-os-grey-schist-showcase-209.jpg" width="4032" height="3024" alt="Winter schist installation 209" loading="lazy">
+    </a>
+    <a href="#img-205" id="thumb-205">
+      <img src="arrowtown-os-grey-schist-showcase-210.jpg" width="864" height="1184" alt="Winter schist installation 210" loading="lazy">
+    </a>
+  </section>
+
+  <!-- ── CTA ── -->
+
+  <section class="cta">
+    <h2>Stone masonry you'll love</h2>
+    <p>Get in touch for schist veneer and adhesive pricing.</p>
+    <a href="https://www.originalstone.co.nz">Contact Original Stone</a>
+  </section>
+
+  <footer>
+    Original Stone &mdash; Arrowtown OS-Grey Schist
+  </footer>
+
+
+  <!-- ── Lightbox overlays ── -->
+  <div id="img-1" class="lightbox">
+    <a href="#thumb-1" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-187.jpg" alt="Completed Arrowtown schist residence, wide exterior view">
+  </div>
+  <div id="img-2" class="lightbox">
+    <a href="#thumb-2" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-188.jpg" alt="Completed residence with mountain backdrop">
+  </div>
+  <div id="img-3" class="lightbox">
+    <a href="#thumb-3" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-192.jpg" alt="Finished house exterior, wide landscape view">
+  </div>
+  <div id="img-4" class="lightbox">
+    <a href="#thumb-4" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-193.jpg" alt="Completed patio with outdoor fire and mountain views">
+  </div>
+  <div id="img-5" class="lightbox">
+    <a href="#thumb-5" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-194.jpg" alt="Finished residence exterior with schist pillars and patio">
+  </div>
+  <div id="img-6" class="lightbox">
+    <a href="#thumb-6" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-195.jpg" alt="Completed OS-Grey schist wall texture detail">
+  </div>
+  <div id="img-7" class="lightbox">
+    <a href="#thumb-7" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-196.jpg" alt="Finished patio with schist feature wall and sliding doors">
+  </div>
+  <div id="img-8" class="lightbox">
+    <a href="#thumb-8" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-197.jpg" alt="Completed schist corner detail with landscape">
+  </div>
+  <div id="img-9" class="lightbox">
+    <a href="#thumb-9" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-198.jpg" alt="Finished OS-Grey schist veneer close-up texture">
+  </div>
+  <div id="img-10" class="lightbox">
+    <a href="#thumb-10" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-199.jpg" alt="Completed entry with schist veneer columns">
+  </div>
+  <div id="img-11" class="lightbox">
+    <a href="#thumb-11" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-202.jpg" alt="Finished front entry with exposed aggregate path">
+  </div>
+  <div id="img-12" class="lightbox">
+    <a href="#thumb-12" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-203.jpg" alt="Completed schist wall meeting corner detail">
+  </div>
+  <div id="img-13" class="lightbox">
+    <a href="#thumb-13" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-204.jpg" alt="Finished garage with schist pillars and gravel driveway">
+  </div>
+  <div id="img-14" class="lightbox">
+    <a href="#thumb-14" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-1.jpg" alt="Summer schist installation 1">
+  </div>
+  <div id="img-15" class="lightbox">
+    <a href="#thumb-15" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-2.jpg" alt="Summer schist installation 2">
+  </div>
+  <div id="img-16" class="lightbox">
+    <a href="#thumb-16" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-3.jpg" alt="Summer schist installation 3">
+  </div>
+  <div id="img-17" class="lightbox">
+    <a href="#thumb-17" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-4.jpg" alt="Summer schist installation 4">
+  </div>
+  <div id="img-18" class="lightbox">
+    <a href="#thumb-18" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-5.jpg" alt="Summer schist installation 5">
+  </div>
+  <div id="img-19" class="lightbox">
+    <a href="#thumb-19" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-6.jpg" alt="Summer schist installation 6">
+  </div>
+  <div id="img-20" class="lightbox">
+    <a href="#thumb-20" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-7.jpg" alt="Summer schist installation 7">
+  </div>
+  <div id="img-21" class="lightbox">
+    <a href="#thumb-21" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-8.jpg" alt="Summer schist installation 8">
+  </div>
+  <div id="img-22" class="lightbox">
+    <a href="#thumb-22" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-9.jpg" alt="Summer schist installation 9">
+  </div>
+  <div id="img-23" class="lightbox">
+    <a href="#thumb-23" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-10.jpg" alt="Summer schist installation 10">
+  </div>
+  <div id="img-24" class="lightbox">
+    <a href="#thumb-24" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-11.jpg" alt="Summer schist installation 11">
+  </div>
+  <div id="img-25" class="lightbox">
+    <a href="#thumb-25" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-12.jpg" alt="Summer schist installation 12">
+  </div>
+  <div id="img-26" class="lightbox">
+    <a href="#thumb-26" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-13.jpg" alt="Summer schist installation 13">
+  </div>
+  <div id="img-27" class="lightbox">
+    <a href="#thumb-27" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-14.jpg" alt="Summer schist installation 14">
+  </div>
+  <div id="img-28" class="lightbox">
+    <a href="#thumb-28" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-15.jpg" alt="Summer schist installation 15">
+  </div>
+  <div id="img-29" class="lightbox">
+    <a href="#thumb-29" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-16.jpg" alt="Summer schist installation 16">
+  </div>
+  <div id="img-30" class="lightbox">
+    <a href="#thumb-30" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-17.jpg" alt="Summer schist installation 17">
+  </div>
+  <div id="img-31" class="lightbox">
+    <a href="#thumb-31" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-18.jpg" alt="Summer schist installation 18">
+  </div>
+  <div id="img-32" class="lightbox">
+    <a href="#thumb-32" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-19.jpg" alt="Summer schist installation 19">
+  </div>
+  <div id="img-33" class="lightbox">
+    <a href="#thumb-33" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-20.jpg" alt="Summer schist installation 20">
+  </div>
+  <div id="img-34" class="lightbox">
+    <a href="#thumb-34" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-21.jpg" alt="Summer schist installation 21">
+  </div>
+  <div id="img-35" class="lightbox">
+    <a href="#thumb-35" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-22.jpg" alt="Summer schist installation 22">
+  </div>
+  <div id="img-36" class="lightbox">
+    <a href="#thumb-36" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-23.jpg" alt="Summer schist installation 23">
+  </div>
+  <div id="img-37" class="lightbox">
+    <a href="#thumb-37" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-24.jpg" alt="Summer schist installation 24">
+  </div>
+  <div id="img-38" class="lightbox">
+    <a href="#thumb-38" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-25.jpg" alt="Summer schist installation 25">
+  </div>
+  <div id="img-39" class="lightbox">
+    <a href="#thumb-39" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-26.jpg" alt="Summer schist installation 26">
+  </div>
+  <div id="img-40" class="lightbox">
+    <a href="#thumb-40" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-27.jpg" alt="Summer schist installation 27">
+  </div>
+  <div id="img-41" class="lightbox">
+    <a href="#thumb-41" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-28.jpg" alt="Summer schist installation 28">
+  </div>
+  <div id="img-42" class="lightbox">
+    <a href="#thumb-42" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-29.jpg" alt="Summer schist installation 29">
+  </div>
+  <div id="img-43" class="lightbox">
+    <a href="#thumb-43" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-30.jpg" alt="Summer schist installation 30">
+  </div>
+  <div id="img-44" class="lightbox">
+    <a href="#thumb-44" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-31.jpg" alt="Summer schist installation 31">
+  </div>
+  <div id="img-45" class="lightbox">
+    <a href="#thumb-45" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-32.jpg" alt="Summer schist installation 32">
+  </div>
+  <div id="img-46" class="lightbox">
+    <a href="#thumb-46" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-33.jpg" alt="Summer schist installation 33">
+  </div>
+  <div id="img-47" class="lightbox">
+    <a href="#thumb-47" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-34.jpg" alt="Summer schist installation 34">
+  </div>
+  <div id="img-48" class="lightbox">
+    <a href="#thumb-48" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-35.jpg" alt="Summer schist installation 35">
+  </div>
+  <div id="img-49" class="lightbox">
+    <a href="#thumb-49" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-36.jpg" alt="Summer schist installation 36">
+  </div>
+  <div id="img-50" class="lightbox">
+    <a href="#thumb-50" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-37.jpg" alt="Summer schist installation 37">
+  </div>
+  <div id="img-51" class="lightbox">
+    <a href="#thumb-51" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-38.jpg" alt="Summer schist installation 38">
+  </div>
+  <div id="img-52" class="lightbox">
+    <a href="#thumb-52" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-39.jpg" alt="Summer schist installation 39">
+  </div>
+  <div id="img-53" class="lightbox">
+    <a href="#thumb-53" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-40.jpg" alt="Summer schist installation 40">
+  </div>
+  <div id="img-54" class="lightbox">
+    <a href="#thumb-54" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-41.jpg" alt="Summer schist installation 41">
+  </div>
+  <div id="img-55" class="lightbox">
+    <a href="#thumb-55" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-42.jpg" alt="Summer schist installation 42">
+  </div>
+  <div id="img-56" class="lightbox">
+    <a href="#thumb-56" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-43.jpg" alt="Summer schist installation 43">
+  </div>
+  <div id="img-57" class="lightbox">
+    <a href="#thumb-57" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-44.jpg" alt="Summer schist installation 44">
+  </div>
+  <div id="img-58" class="lightbox">
+    <a href="#thumb-58" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-45.jpg" alt="Summer schist installation 45">
+  </div>
+  <div id="img-59" class="lightbox">
+    <a href="#thumb-59" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-46.jpg" alt="Summer schist installation 46">
+  </div>
+  <div id="img-60" class="lightbox">
+    <a href="#thumb-60" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-47.jpg" alt="Summer schist installation 47">
+  </div>
+  <div id="img-61" class="lightbox">
+    <a href="#thumb-61" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-48.jpg" alt="Summer schist installation 48">
+  </div>
+  <div id="img-62" class="lightbox">
+    <a href="#thumb-62" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-49.jpg" alt="Summer schist installation 49">
+  </div>
+  <div id="img-63" class="lightbox">
+    <a href="#thumb-63" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-50.jpg" alt="Summer schist installation 50">
+  </div>
+  <div id="img-64" class="lightbox">
+    <a href="#thumb-64" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-51.jpg" alt="Summer schist installation 51">
+  </div>
+  <div id="img-65" class="lightbox">
+    <a href="#thumb-65" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-52.jpg" alt="Summer schist installation 52">
+  </div>
+  <div id="img-66" class="lightbox">
+    <a href="#thumb-66" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-53.jpg" alt="Summer schist installation 53">
+  </div>
+  <div id="img-67" class="lightbox">
+    <a href="#thumb-67" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-54.jpg" alt="Summer schist installation 54">
+  </div>
+  <div id="img-68" class="lightbox">
+    <a href="#thumb-68" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-55.jpg" alt="Summer schist installation 55">
+  </div>
+  <div id="img-69" class="lightbox">
+    <a href="#thumb-69" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-56.jpg" alt="Summer schist installation 56">
+  </div>
+  <div id="img-70" class="lightbox">
+    <a href="#thumb-70" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-57.jpg" alt="Summer schist installation 57">
+  </div>
+  <div id="img-71" class="lightbox">
+    <a href="#thumb-71" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-58.jpg" alt="Summer schist installation 58">
+  </div>
+  <div id="img-72" class="lightbox">
+    <a href="#thumb-72" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-59.jpg" alt="Summer schist installation 59">
+  </div>
+  <div id="img-73" class="lightbox">
+    <a href="#thumb-73" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-60.jpg" alt="Summer schist installation 60">
+  </div>
+  <div id="img-74" class="lightbox">
+    <a href="#thumb-74" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-61.jpg" alt="Summer schist installation 61">
+  </div>
+  <div id="img-75" class="lightbox">
+    <a href="#thumb-75" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-62.jpg" alt="Summer schist installation 62">
+  </div>
+  <div id="img-76" class="lightbox">
+    <a href="#thumb-76" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-63.jpg" alt="Summer schist installation 63">
+  </div>
+  <div id="img-77" class="lightbox">
+    <a href="#thumb-77" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-64.jpg" alt="Summer schist installation 64">
+  </div>
+  <div id="img-78" class="lightbox">
+    <a href="#thumb-78" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-65.jpg" alt="Summer schist installation 65">
+  </div>
+  <div id="img-79" class="lightbox">
+    <a href="#thumb-79" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-66.jpg" alt="Summer schist installation 66">
+  </div>
+  <div id="img-80" class="lightbox">
+    <a href="#thumb-80" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-67.jpg" alt="Summer schist installation 67">
+  </div>
+  <div id="img-81" class="lightbox">
+    <a href="#thumb-81" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-68.jpg" alt="Summer schist installation 68">
+  </div>
+  <div id="img-82" class="lightbox">
+    <a href="#thumb-82" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-69.jpg" alt="Summer schist installation 69">
+  </div>
+  <div id="img-83" class="lightbox">
+    <a href="#thumb-83" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-70.jpg" alt="Summer schist installation 70">
+  </div>
+  <div id="img-84" class="lightbox">
+    <a href="#thumb-84" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-71.jpg" alt="Summer schist installation 71">
+  </div>
+  <div id="img-85" class="lightbox">
+    <a href="#thumb-85" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-72.jpg" alt="Summer schist installation 72">
+  </div>
+  <div id="img-86" class="lightbox">
+    <a href="#thumb-86" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-73.jpg" alt="Summer schist installation 73">
+  </div>
+  <div id="img-87" class="lightbox">
+    <a href="#thumb-87" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-74.jpg" alt="Summer schist installation 74">
+  </div>
+  <div id="img-88" class="lightbox">
+    <a href="#thumb-88" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-75.jpg" alt="Summer schist installation 75">
+  </div>
+  <div id="img-89" class="lightbox">
+    <a href="#thumb-89" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-76.jpg" alt="Summer schist installation 76">
+  </div>
+  <div id="img-90" class="lightbox">
+    <a href="#thumb-90" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-77.jpg" alt="Summer schist installation 77">
+  </div>
+  <div id="img-91" class="lightbox">
+    <a href="#thumb-91" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-78.jpg" alt="Summer schist installation 78">
+  </div>
+  <div id="img-92" class="lightbox">
+    <a href="#thumb-92" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-79.jpg" alt="Summer schist installation 79">
+  </div>
+  <div id="img-93" class="lightbox">
+    <a href="#thumb-93" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-80.jpg" alt="Summer schist installation 80">
+  </div>
+  <div id="img-94" class="lightbox">
+    <a href="#thumb-94" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-81.jpg" alt="Summer schist installation 81">
+  </div>
+  <div id="img-95" class="lightbox">
+    <a href="#thumb-95" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-82.jpg" alt="Summer schist installation 82">
+  </div>
+  <div id="img-96" class="lightbox">
+    <a href="#thumb-96" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-83.jpg" alt="Summer schist installation 83">
+  </div>
+  <div id="img-97" class="lightbox">
+    <a href="#thumb-97" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-84.jpg" alt="Summer schist installation 84">
+  </div>
+  <div id="img-98" class="lightbox">
+    <a href="#thumb-98" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-85.jpg" alt="Summer schist installation 85">
+  </div>
+  <div id="img-99" class="lightbox">
+    <a href="#thumb-99" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-86.jpg" alt="Summer schist installation 86">
+  </div>
+  <div id="img-100" class="lightbox">
+    <a href="#thumb-100" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-87.jpg" alt="Summer schist installation 87">
+  </div>
+  <div id="img-101" class="lightbox">
+    <a href="#thumb-101" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-88.jpg" alt="Summer schist installation 88">
+  </div>
+  <div id="img-102" class="lightbox">
+    <a href="#thumb-102" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-89.jpg" alt="Summer schist installation 89">
+  </div>
+  <div id="img-103" class="lightbox">
+    <a href="#thumb-103" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-90.jpg" alt="Summer schist installation 90">
+  </div>
+  <div id="img-104" class="lightbox">
+    <a href="#thumb-104" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-91.jpg" alt="Summer schist installation 91">
+  </div>
+  <div id="img-105" class="lightbox">
+    <a href="#thumb-105" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-92.jpg" alt="Summer schist installation 92">
+  </div>
+  <div id="img-106" class="lightbox">
+    <a href="#thumb-106" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-93.jpg" alt="Summer schist installation 93">
+  </div>
+  <div id="img-107" class="lightbox">
+    <a href="#thumb-107" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-94.jpg" alt="Summer schist installation 94">
+  </div>
+  <div id="img-108" class="lightbox">
+    <a href="#thumb-108" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-95.jpg" alt="Summer schist installation 95">
+  </div>
+  <div id="img-109" class="lightbox">
+    <a href="#thumb-109" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-96.jpg" alt="Summer schist installation 96">
+  </div>
+  <div id="img-110" class="lightbox">
+    <a href="#thumb-110" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-97.jpg" alt="Summer schist installation 97">
+  </div>
+  <div id="img-111" class="lightbox">
+    <a href="#thumb-111" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-98.jpg" alt="Summer schist installation 98">
+  </div>
+  <div id="img-112" class="lightbox">
+    <a href="#thumb-112" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-99.jpg" alt="Summer schist installation 99">
+  </div>
+  <div id="img-113" class="lightbox">
+    <a href="#thumb-113" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-100.jpg" alt="Summer schist installation 100">
+  </div>
+  <div id="img-114" class="lightbox">
+    <a href="#thumb-114" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-101.jpg" alt="Summer schist installation 101">
+  </div>
+  <div id="img-115" class="lightbox">
+    <a href="#thumb-115" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-102.jpg" alt="Summer schist installation 102">
+  </div>
+  <div id="img-116" class="lightbox">
+    <a href="#thumb-116" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-103.jpg" alt="Summer schist installation 103">
+  </div>
+  <div id="img-117" class="lightbox">
+    <a href="#thumb-117" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-104.jpg" alt="Summer schist installation 104">
+  </div>
+  <div id="img-118" class="lightbox">
+    <a href="#thumb-118" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-105.jpg" alt="Summer schist installation 105">
+  </div>
+  <div id="img-119" class="lightbox">
+    <a href="#thumb-119" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-106.jpg" alt="Summer schist installation 106">
+  </div>
+  <div id="img-120" class="lightbox">
+    <a href="#thumb-120" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-107.jpg" alt="Summer schist installation 107">
+  </div>
+  <div id="img-121" class="lightbox">
+    <a href="#thumb-121" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-108.jpg" alt="Summer schist installation 108">
+  </div>
+  <div id="img-122" class="lightbox">
+    <a href="#thumb-122" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-109.jpg" alt="Summer schist installation 109">
+  </div>
+  <div id="img-123" class="lightbox">
+    <a href="#thumb-123" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-110.jpg" alt="Summer schist installation 110">
+  </div>
+  <div id="img-124" class="lightbox">
+    <a href="#thumb-124" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-111.jpg" alt="Summer schist installation 111">
+  </div>
+  <div id="img-125" class="lightbox">
+    <a href="#thumb-125" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-112.jpg" alt="Summer schist installation 112">
+  </div>
+  <div id="img-126" class="lightbox">
+    <a href="#thumb-126" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-113.jpg" alt="Summer schist installation 113">
+  </div>
+  <div id="img-127" class="lightbox">
+    <a href="#thumb-127" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-114.jpg" alt="Summer schist installation 114">
+  </div>
+  <div id="img-128" class="lightbox">
+    <a href="#thumb-128" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-115.jpg" alt="Summer schist installation 115">
+  </div>
+  <div id="img-129" class="lightbox">
+    <a href="#thumb-129" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-116.jpg" alt="Summer schist installation 116">
+  </div>
+  <div id="img-130" class="lightbox">
+    <a href="#thumb-130" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-117.jpg" alt="Summer schist installation 117">
+  </div>
+  <div id="img-131" class="lightbox">
+    <a href="#thumb-131" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-118.jpg" alt="Summer schist installation 118">
+  </div>
+  <div id="img-132" class="lightbox">
+    <a href="#thumb-132" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-119.jpg" alt="Summer schist installation 119">
+  </div>
+  <div id="img-133" class="lightbox">
+    <a href="#thumb-133" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-120.jpg" alt="Summer schist installation 120">
+  </div>
+  <div id="img-134" class="lightbox">
+    <a href="#thumb-134" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-121.jpg" alt="Summer schist installation 121">
+  </div>
+  <div id="img-135" class="lightbox">
+    <a href="#thumb-135" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-122.jpg" alt="Summer schist installation 122">
+  </div>
+  <div id="img-136" class="lightbox">
+    <a href="#thumb-136" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-123.jpg" alt="Summer schist installation 123">
+  </div>
+  <div id="img-137" class="lightbox">
+    <a href="#thumb-137" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-124.jpg" alt="Summer schist installation 124">
+  </div>
+  <div id="img-138" class="lightbox">
+    <a href="#thumb-138" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-125.jpg" alt="Summer schist installation 125">
+  </div>
+  <div id="img-139" class="lightbox">
+    <a href="#thumb-139" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-126.jpg" alt="Summer schist installation 126">
+  </div>
+  <div id="img-140" class="lightbox">
+    <a href="#thumb-140" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-127.jpg" alt="Summer schist installation 127">
+  </div>
+  <div id="img-141" class="lightbox">
+    <a href="#thumb-141" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-128.jpg" alt="Summer schist installation 128">
+  </div>
+  <div id="img-142" class="lightbox">
+    <a href="#thumb-142" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-129.jpg" alt="Summer schist installation 129">
+  </div>
+  <div id="img-143" class="lightbox">
+    <a href="#thumb-143" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-130.jpg" alt="Summer schist installation 130">
+  </div>
+  <div id="img-144" class="lightbox">
+    <a href="#thumb-144" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-131.jpg" alt="Summer schist installation 131">
+  </div>
+  <div id="img-145" class="lightbox">
+    <a href="#thumb-145" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-132.jpg" alt="Summer schist installation 132">
+  </div>
+  <div id="img-146" class="lightbox">
+    <a href="#thumb-146" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-133.jpg" alt="Summer schist installation 133">
+  </div>
+  <div id="img-147" class="lightbox">
+    <a href="#thumb-147" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-134.jpg" alt="Summer schist installation 134">
+  </div>
+  <div id="img-148" class="lightbox">
+    <a href="#thumb-148" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-135.jpg" alt="Summer schist installation 135">
+  </div>
+  <div id="img-149" class="lightbox">
+    <a href="#thumb-149" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-136.jpg" alt="Summer schist installation 136">
+  </div>
+  <div id="img-150" class="lightbox">
+    <a href="#thumb-150" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-137.jpg" alt="Summer schist installation 137">
+  </div>
+  <div id="img-151" class="lightbox">
+    <a href="#thumb-151" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-138.jpg" alt="Summer schist installation 138">
+  </div>
+  <div id="img-152" class="lightbox">
+    <a href="#thumb-152" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-139.jpg" alt="Summer schist installation 139">
+  </div>
+  <div id="img-153" class="lightbox">
+    <a href="#thumb-153" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-140.jpg" alt="Summer schist installation 140">
+  </div>
+  <div id="img-154" class="lightbox">
+    <a href="#thumb-154" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-141.jpg" alt="Summer schist installation 141">
+  </div>
+  <div id="img-155" class="lightbox">
+    <a href="#thumb-155" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-142.jpg" alt="Summer schist installation 142">
+  </div>
+  <div id="img-156" class="lightbox">
+    <a href="#thumb-156" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-143.jpg" alt="Summer schist installation 143">
+  </div>
+  <div id="img-157" class="lightbox">
+    <a href="#thumb-157" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-144.jpg" alt="Summer schist installation 144">
+  </div>
+  <div id="img-158" class="lightbox">
+    <a href="#thumb-158" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-145.jpg" alt="Summer schist installation 145">
+  </div>
+  <div id="img-159" class="lightbox">
+    <a href="#thumb-159" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-146.jpg" alt="Summer schist installation 146">
+  </div>
+  <div id="img-160" class="lightbox">
+    <a href="#thumb-160" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-147.jpg" alt="Summer schist installation 147">
+  </div>
+  <div id="img-161" class="lightbox">
+    <a href="#thumb-161" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-148.jpg" alt="Summer schist installation 148">
+  </div>
+  <div id="img-162" class="lightbox">
+    <a href="#thumb-162" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-149.jpg" alt="Summer schist installation 149">
+  </div>
+  <div id="img-163" class="lightbox">
+    <a href="#thumb-163" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-150.jpg" alt="Summer schist installation 150">
+  </div>
+  <div id="img-164" class="lightbox">
+    <a href="#thumb-164" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-151.jpg" alt="Summer schist installation 151">
+  </div>
+  <div id="img-165" class="lightbox">
+    <a href="#thumb-165" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-152.jpg" alt="Summer schist installation 152">
+  </div>
+  <div id="img-166" class="lightbox">
+    <a href="#thumb-166" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-153.jpg" alt="Summer schist installation 153">
+  </div>
+  <div id="img-167" class="lightbox">
+    <a href="#thumb-167" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-154.jpg" alt="Summer schist installation 154">
+  </div>
+  <div id="img-168" class="lightbox">
+    <a href="#thumb-168" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-155.jpg" alt="Summer schist installation 155">
+  </div>
+  <div id="img-169" class="lightbox">
+    <a href="#thumb-169" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-156.jpg" alt="Winter schist installation 156">
+  </div>
+  <div id="img-170" class="lightbox">
+    <a href="#thumb-170" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-157.jpg" alt="Winter schist installation 157">
+  </div>
+  <div id="img-171" class="lightbox">
+    <a href="#thumb-171" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-158.jpg" alt="Winter schist installation 158">
+  </div>
+  <div id="img-172" class="lightbox">
+    <a href="#thumb-172" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-159.jpg" alt="Winter schist installation 159">
+  </div>
+  <div id="img-173" class="lightbox">
+    <a href="#thumb-173" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-160.jpg" alt="Winter schist installation 160">
+  </div>
+  <div id="img-174" class="lightbox">
+    <a href="#thumb-174" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-161.jpg" alt="Winter schist installation 161">
+  </div>
+  <div id="img-175" class="lightbox">
+    <a href="#thumb-175" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-162.jpg" alt="Winter schist installation 162">
+  </div>
+  <div id="img-176" class="lightbox">
+    <a href="#thumb-176" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-163.jpg" alt="Winter schist installation 163">
+  </div>
+  <div id="img-177" class="lightbox">
+    <a href="#thumb-177" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-164.jpg" alt="Winter schist installation 164">
+  </div>
+  <div id="img-178" class="lightbox">
+    <a href="#thumb-178" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-165.jpg" alt="Winter schist installation 165">
+  </div>
+  <div id="img-179" class="lightbox">
+    <a href="#thumb-179" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-166.jpg" alt="Winter schist installation 166">
+  </div>
+  <div id="img-180" class="lightbox">
+    <a href="#thumb-180" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-167.jpg" alt="Winter schist installation 167">
+  </div>
+  <div id="img-181" class="lightbox">
+    <a href="#thumb-181" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-168.jpg" alt="Winter schist installation 168">
+  </div>
+  <div id="img-182" class="lightbox">
+    <a href="#thumb-182" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-169.jpg" alt="Winter schist installation 169">
+  </div>
+  <div id="img-183" class="lightbox">
+    <a href="#thumb-183" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-170.jpg" alt="Winter schist installation 170">
+  </div>
+  <div id="img-184" class="lightbox">
+    <a href="#thumb-184" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-171.jpg" alt="Winter schist installation 171">
+  </div>
+  <div id="img-185" class="lightbox">
+    <a href="#thumb-185" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-172.jpg" alt="Winter schist installation 172">
+  </div>
+  <div id="img-186" class="lightbox">
+    <a href="#thumb-186" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-173.jpg" alt="Winter schist installation 173">
+  </div>
+  <div id="img-187" class="lightbox">
+    <a href="#thumb-187" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-174.jpg" alt="Winter schist installation 174">
+  </div>
+  <div id="img-188" class="lightbox">
+    <a href="#thumb-188" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-175.jpg" alt="Winter schist installation 175">
+  </div>
+  <div id="img-189" class="lightbox">
+    <a href="#thumb-189" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-176.jpg" alt="Winter schist installation 176">
+  </div>
+  <div id="img-190" class="lightbox">
+    <a href="#thumb-190" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-177.jpg" alt="Winter schist installation 177">
+  </div>
+  <div id="img-191" class="lightbox">
+    <a href="#thumb-191" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-178.jpg" alt="Winter schist installation 178">
+  </div>
+  <div id="img-192" class="lightbox">
+    <a href="#thumb-192" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-179.jpg" alt="Winter schist installation 179">
+  </div>
+  <div id="img-193" class="lightbox">
+    <a href="#thumb-193" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-180.jpg" alt="Winter schist installation 180">
+  </div>
+  <div id="img-194" class="lightbox">
+    <a href="#thumb-194" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-181.jpg" alt="Winter schist installation 181">
+  </div>
+  <div id="img-195" class="lightbox">
+    <a href="#thumb-195" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-182.jpg" alt="Frost on site, Arrowtown winter morning">
+  </div>
+  <div id="img-196" class="lightbox">
+    <a href="#thumb-196" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-183.jpg" alt="Ice crystals on windscreen, Arrowtown winter">
+  </div>
+  <div id="img-197" class="lightbox">
+    <a href="#thumb-197" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-185.jpg" alt="Morning frost macro, Arrowtown winter">
+  </div>
+  <div id="img-198" class="lightbox">
+    <a href="#thumb-198" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-186.jpg" alt="Frost detail on site, Arrowtown winter">
+  </div>
+  <div id="img-199" class="lightbox">
+    <a href="#thumb-199" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-200.jpg" alt="Winter schist installation 200">
+  </div>
+  <div id="img-200" class="lightbox">
+    <a href="#thumb-200" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-201.jpg" alt="Winter schist installation 201">
+  </div>
+  <div id="img-201" class="lightbox">
+    <a href="#thumb-201" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-205.jpg" alt="Winter schist installation 205">
+  </div>
+  <div id="img-202" class="lightbox">
+    <a href="#thumb-202" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-206.jpg" alt="Winter schist installation 206">
+  </div>
+  <div id="img-203" class="lightbox">
+    <a href="#thumb-203" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-207.jpg" alt="Winter schist installation 207">
+  </div>
+  <div id="img-204" class="lightbox">
+    <a href="#thumb-204" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-209.jpg" alt="Winter schist installation 209">
+  </div>
+  <div id="img-205" class="lightbox">
+    <a href="#thumb-205" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="arrowtown-os-grey-schist-showcase-210.jpg" alt="Winter schist installation 210">
+  </div>
+
+  <!-- ── Back to Top ── -->
+  <a href="#top" class="back-to-top" aria-label="Back to top">&#8593;</a>
+
+</body>
+</html>
