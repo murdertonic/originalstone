@@ -791,20 +791,88 @@
       box-shadow: 0 20px 60px rgba(0,0,0,0.6);
     }
 
+    .lightbox:target img {
+      animation: lbImgIn 220ms ease-out;
+    }
+
+    @keyframes lbImgIn {
+      from { opacity: 0; transform: scale(0.96); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
     .lightbox-close {
       position: absolute;
-      top: 18px;
+      top: 20px;
       right: 22px;
-      font-size: 36px;
-      line-height: 1;
       color: #fff;
       text-decoration: none;
-      font-weight: 300;
-      opacity: 0.9;
+      opacity: 0.8;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 2px;
+      transition: opacity 0.15s ease;
     }
 
     .lightbox-close:hover {
       opacity: 1;
+    }
+
+    .lightbox-close .close-x {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1;
+    }
+
+    /* ── Lightbox nav ── */
+
+    .lightbox-nav {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1000;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      font-size: 24px;
+      line-height: 1;
+      cursor: pointer;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s ease;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .lightbox-nav:hover {
+      background: rgba(255,255,255,0.25);
+    }
+
+    .lightbox-nav:focus-visible {
+      outline: 2px solid #c4a77d;
+      outline-offset: 2px;
+    }
+
+    .lightbox-nav--prev { left: 16px; }
+    .lightbox-nav--next { right: 16px; }
+
+    @media (max-width: 640px) {
+      .lightbox-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+      }
+
+      .lightbox-nav--prev { left: 10px; }
+      .lightbox-nav--next { right: 10px; }
     }
   </style>
 </head>
@@ -972,39 +1040,39 @@ Installed on SAMv&trade; (Sumner Adhered Masonry veneer) System</div>
   <div class="prose">
     <p>In February 2025, three stone masons began a six-month journey in Arrowtown, cladding a 450m&sup2; family estate in OS-Grey Schist. Working through Central Otago&rsquo;s extreme seasons&mdash;from 29&deg;C summer days to -6&deg;C winter mornings&mdash;they hand-selected and dry-stacked every stone.</p>
 
-    <ul class="story-bullets">
-      <li><strong>Timeline:</strong> Six months on site, February to August 2025</li>
-      <li><strong>Team:</strong> Three master stone masons, two living on-site in a caravan</li>
-      <li><strong>Climate:</strong> Summer days 6:30am&ndash;8:30pm; winter limited to 10am&ndash;3pm</li>
-      <li><strong>Stone:</strong> OS-Grey Local Schist, dry-stacked with tight precision joints</li>
-      <li><strong>Setting:</strong> Between two golf courses with mountain backdrop</li>
-      <li><strong>Client experience:</strong> Warm hospitality, tea and fresh pastries on site</li>
-    </ul>
-
     <details class="story-accordion">
       <summary>Read the full story</summary>
       <div class="story-full">
-        <p>In February 2025, two of our stone masons arrived in Arrowtown, setting up a caravan on site that would be their home through summer&rsquo;s heat and winter&rsquo;s freeze. A third mason, living nearby, joined them each day. Together, they embarked on a journey that would span six months and four seasons.</p>
+        <ul class="story-bullets">
+          <li><strong>Timeline:</strong> Six months on site, February to August 2025</li>
+          <li><strong>Team:</strong> Three master stone masons, two living on-site in a caravan</li>
+          <li><strong>Climate:</strong> Summer days 6:30am&ndash;8:30pm; winter limited to 10am&ndash;3pm</li>
+          <li><strong>Stone:</strong> OS-Grey Local Schist, dry-stacked with tight precision joints</li>
+          <li><strong>Setting:</strong> Between two golf courses with mountain backdrop</li>
+          <li><strong>Client experience:</strong> Warm hospitality, tea and fresh pastries on site</li>
+        </ul>
+
+        <p>Two of our masons set up a caravan on site&mdash;their home through heat and freeze alike. A third, living nearby, joined them each morning. The work shaped their days; the landscape shaped everything else.</p>
 
         <div class="story-highlight">
           &ldquo;Working with OS-Grey Schist in a dry-stacked format demands patience and precision. Each piece must be carefully selected, positioned, and fitted. We sourced additional stone throughout the project to ensure we could achieve the tight, seamless finish our clients deserved.&rdquo;
         </div>
 
-        <p>The Central Otago climate tested both our team and the stone. Summer working days stretched from 6:30am to 8:30pm, taking advantage of long daylight hours while managing midday temperatures of 29&deg;C.</p>
+        <p>In summer the long Central Otago daylight allowed work from early morning well into evening, though the midday heat demanded a slower pace and careful hydration of the stone beds.</p>
 
-        <p>Winter brought a different challenge&mdash;mornings at -6&deg;C meant we could only work between 10am and 3pm, when conditions allowed for proper stone setting.</p>
+        <p>Winter reversed the equation. Frost lingered until mid-morning and returned by mid-afternoon, compressing each working day into a narrow window where temperatures permitted proper stone setting.</p>
 
         <p>The property itself became part of the experience. Nestled between two golf courses with views across rolling hillocks and natural schist reefs, the site welcomed regular visitors&mdash;wild rabbits and quails who watched our progress with curiosity.</p>
 
-        <p>The clients were equally delightful, regularly inviting us for cups of tea or coffee, accompanied by fresh muffins or pastries. These moments of connection made the project truly special.</p>
+        <p>The clients were equally generous, regularly appearing with cups of tea, coffee, and fresh pastries. Those small rituals of hospitality became one of the defining memories of the build.</p>
 
-        <p>OS-Grey Schist, with its subtle grey and earthen tones, proved the perfect choice for this landscape. The stone&rsquo;s natural variation creates a living fa&ccedil;ade that shifts with the light&mdash;cool and serene in morning shadows, warm and textured in golden afternoon sun.</p>
+        <p>OS-Grey Schist, with its subtle grey and earthen tones, proved the ideal material for this setting. Its natural variation creates a living fa&ccedil;ade that shifts with the light&mdash;cool and quiet in morning shadow, warm and textured under afternoon sun.</p>
 
-        <p>The dry-stack panels serve as visual anchors along the home&rsquo;s substantial elevation, breaking up the clean lines of long-run metal and grounding the architecture in its environment.</p>
+        <p>The dry-stack panels serve as visual anchors along the home&rsquo;s elevation, breaking up the clean lines of long-run metal and grounding the architecture in its surroundings.</p>
 
-        <p>Dry-stacking schist to achieve tight, professional joints requires skill, experience, and an eye for how each stone will work with its neighbours. We hand-selected pieces throughout the project, sometimes sourcing additional material to ensure quality was never compromised. The result is masonry work we&rsquo;re genuinely proud of&mdash;a finish that honours both the stone and the clients&rsquo; vision.</p>
+        <p>Achieving tight, professional joints in a dry-stack format requires an eye for how each stone will sit with its neighbours. We hand-selected pieces continuously, sometimes sourcing additional material rather than compromising on fit. The result is masonry work we&rsquo;re genuinely proud of&mdash;a finish that honours both the stone and the clients&rsquo; vision.</p>
 
-        <p>The photographs here capture that progression&mdash;from raw landscape and first courses through to the completed residence, a 450m&sup2; family estate that feels both substantial and sensitive, modern yet timeless.</p>
+        <p>The photographs here trace that progression&mdash;from raw landscape and first courses through to the completed residence, a home that feels both substantial and sensitive, modern yet timeless.</p>
 
         <div class="story-highlight">
           &ldquo;This is a very special, private place. A treat and a retreat. We would gladly work with these clients again, and we know they will enjoy this wonderful home for years to come.&rdquo;
@@ -1645,823 +1713,823 @@ Installed on SAMv&trade; (Sumner Adhered Masonry veneer) System</div>
 
   <!-- ── Lightbox overlays ── -->
   <div id="img-1" class="lightbox">
-    <a href="#thumb-1" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-1" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-187.jpg" alt="Completed Arrowtown schist residence, wide exterior view">
   </div>
   <div id="img-2" class="lightbox">
-    <a href="#thumb-2" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-2" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-188.jpg" alt="Completed residence with mountain backdrop">
   </div>
   <div id="img-3" class="lightbox">
-    <a href="#thumb-3" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-3" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-192.jpg" alt="Finished house exterior, wide landscape view">
   </div>
   <div id="img-4" class="lightbox">
-    <a href="#thumb-4" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-4" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-193.jpg" alt="Completed patio with outdoor fire and mountain views">
   </div>
   <div id="img-5" class="lightbox">
-    <a href="#thumb-5" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-5" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-194.jpg" alt="Finished residence exterior with schist pillars and patio">
   </div>
   <div id="img-6" class="lightbox">
-    <a href="#thumb-6" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-6" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-195.jpg" alt="Completed OS-Grey schist wall texture detail">
   </div>
   <div id="img-7" class="lightbox">
-    <a href="#thumb-7" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-7" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-196.jpg" alt="Finished patio with schist feature wall and sliding doors">
   </div>
   <div id="img-8" class="lightbox">
-    <a href="#thumb-8" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-8" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-197.jpg" alt="Completed schist corner detail with landscape">
   </div>
   <div id="img-9" class="lightbox">
-    <a href="#thumb-9" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-9" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-198.jpg" alt="Finished OS-Grey schist veneer close-up texture">
   </div>
   <div id="img-10" class="lightbox">
-    <a href="#thumb-10" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-10" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-199.jpg" alt="Completed entry with schist veneer columns">
   </div>
   <div id="img-11" class="lightbox">
-    <a href="#thumb-11" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-11" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-202.jpg" alt="Finished front entry with exposed aggregate path">
   </div>
   <div id="img-12" class="lightbox">
-    <a href="#thumb-12" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-12" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-203.jpg" alt="Completed schist wall meeting corner detail">
   </div>
   <div id="img-13" class="lightbox">
-    <a href="#thumb-13" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-13" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-204.jpg" alt="Finished garage with schist pillars and gravel driveway">
   </div>
   <div id="img-14" class="lightbox">
-    <a href="#thumb-14" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-14" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-1.jpg" alt="Summer schist installation 1">
   </div>
   <div id="img-15" class="lightbox">
-    <a href="#thumb-15" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-15" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-2.jpg" alt="Summer schist installation 2">
   </div>
   <div id="img-16" class="lightbox">
-    <a href="#thumb-16" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-16" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-3.jpg" alt="Summer schist installation 3">
   </div>
   <div id="img-17" class="lightbox">
-    <a href="#thumb-17" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-17" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-4.jpg" alt="Summer schist installation 4">
   </div>
   <div id="img-18" class="lightbox">
-    <a href="#thumb-18" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-18" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-5.jpg" alt="Summer schist installation 5">
   </div>
   <div id="img-19" class="lightbox">
-    <a href="#thumb-19" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-19" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-6.jpg" alt="Summer schist installation 6">
   </div>
   <div id="img-20" class="lightbox">
-    <a href="#thumb-20" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-20" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-7.jpg" alt="Summer schist installation 7">
   </div>
   <div id="img-21" class="lightbox">
-    <a href="#thumb-21" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-21" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-8.jpg" alt="Summer schist installation 8">
   </div>
   <div id="img-22" class="lightbox">
-    <a href="#thumb-22" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-22" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-9.jpg" alt="Summer schist installation 9">
   </div>
   <div id="img-23" class="lightbox">
-    <a href="#thumb-23" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-23" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-10.jpg" alt="Summer schist installation 10">
   </div>
   <div id="img-24" class="lightbox">
-    <a href="#thumb-24" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-24" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-11.jpg" alt="Summer schist installation 11">
   </div>
   <div id="img-25" class="lightbox">
-    <a href="#thumb-25" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-25" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-12.jpg" alt="Summer schist installation 12">
   </div>
   <div id="img-26" class="lightbox">
-    <a href="#thumb-26" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-26" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-13.jpg" alt="Summer schist installation 13">
   </div>
   <div id="img-27" class="lightbox">
-    <a href="#thumb-27" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-27" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-14.jpg" alt="Summer schist installation 14">
   </div>
   <div id="img-28" class="lightbox">
-    <a href="#thumb-28" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-28" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-15.jpg" alt="Summer schist installation 15">
   </div>
   <div id="img-29" class="lightbox">
-    <a href="#thumb-29" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-29" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-16.jpg" alt="Summer schist installation 16">
   </div>
   <div id="img-30" class="lightbox">
-    <a href="#thumb-30" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-30" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-17.jpg" alt="Summer schist installation 17">
   </div>
   <div id="img-31" class="lightbox">
-    <a href="#thumb-31" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-31" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-18.jpg" alt="Summer schist installation 18">
   </div>
   <div id="img-32" class="lightbox">
-    <a href="#thumb-32" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-32" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-19.jpg" alt="Summer schist installation 19">
   </div>
   <div id="img-33" class="lightbox">
-    <a href="#thumb-33" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-33" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-20.jpg" alt="Summer schist installation 20">
   </div>
   <div id="img-34" class="lightbox">
-    <a href="#thumb-34" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-34" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-21.jpg" alt="Summer schist installation 21">
   </div>
   <div id="img-35" class="lightbox">
-    <a href="#thumb-35" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-35" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-22.jpg" alt="Summer schist installation 22">
   </div>
   <div id="img-36" class="lightbox">
-    <a href="#thumb-36" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-36" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-23.jpg" alt="Summer schist installation 23">
   </div>
   <div id="img-37" class="lightbox">
-    <a href="#thumb-37" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-37" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-24.jpg" alt="Summer schist installation 24">
   </div>
   <div id="img-38" class="lightbox">
-    <a href="#thumb-38" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-38" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-25.jpg" alt="Summer schist installation 25">
   </div>
   <div id="img-39" class="lightbox">
-    <a href="#thumb-39" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-39" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-26.jpg" alt="Summer schist installation 26">
   </div>
   <div id="img-40" class="lightbox">
-    <a href="#thumb-40" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-40" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-27.jpg" alt="Summer schist installation 27">
   </div>
   <div id="img-41" class="lightbox">
-    <a href="#thumb-41" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-41" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-28.jpg" alt="Summer schist installation 28">
   </div>
   <div id="img-42" class="lightbox">
-    <a href="#thumb-42" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-42" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-29.jpg" alt="Summer schist installation 29">
   </div>
   <div id="img-43" class="lightbox">
-    <a href="#thumb-43" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-43" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-30.jpg" alt="Summer schist installation 30">
   </div>
   <div id="img-44" class="lightbox">
-    <a href="#thumb-44" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-44" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-31.jpg" alt="Summer schist installation 31">
   </div>
   <div id="img-45" class="lightbox">
-    <a href="#thumb-45" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-45" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-32.jpg" alt="Summer schist installation 32">
   </div>
   <div id="img-46" class="lightbox">
-    <a href="#thumb-46" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-46" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-33.jpg" alt="Summer schist installation 33">
   </div>
   <div id="img-47" class="lightbox">
-    <a href="#thumb-47" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-47" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-34.jpg" alt="Summer schist installation 34">
   </div>
   <div id="img-48" class="lightbox">
-    <a href="#thumb-48" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-48" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-35.jpg" alt="Summer schist installation 35">
   </div>
   <div id="img-49" class="lightbox">
-    <a href="#thumb-49" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-49" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-36.jpg" alt="Summer schist installation 36">
   </div>
   <div id="img-50" class="lightbox">
-    <a href="#thumb-50" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-50" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-37.jpg" alt="Summer schist installation 37">
   </div>
   <div id="img-51" class="lightbox">
-    <a href="#thumb-51" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-51" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-38.jpg" alt="Summer schist installation 38">
   </div>
   <div id="img-52" class="lightbox">
-    <a href="#thumb-52" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-52" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-39.jpg" alt="Summer schist installation 39">
   </div>
   <div id="img-53" class="lightbox">
-    <a href="#thumb-53" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-53" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-40.jpg" alt="Summer schist installation 40">
   </div>
   <div id="img-54" class="lightbox">
-    <a href="#thumb-54" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-54" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-41.jpg" alt="Summer schist installation 41">
   </div>
   <div id="img-55" class="lightbox">
-    <a href="#thumb-55" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-55" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-42.jpg" alt="Summer schist installation 42">
   </div>
   <div id="img-56" class="lightbox">
-    <a href="#thumb-56" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-56" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-43.jpg" alt="Summer schist installation 43">
   </div>
   <div id="img-57" class="lightbox">
-    <a href="#thumb-57" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-57" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-44.jpg" alt="Summer schist installation 44">
   </div>
   <div id="img-58" class="lightbox">
-    <a href="#thumb-58" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-58" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-45.jpg" alt="Summer schist installation 45">
   </div>
   <div id="img-59" class="lightbox">
-    <a href="#thumb-59" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-59" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-46.jpg" alt="Summer schist installation 46">
   </div>
   <div id="img-60" class="lightbox">
-    <a href="#thumb-60" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-60" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-47.jpg" alt="Summer schist installation 47">
   </div>
   <div id="img-61" class="lightbox">
-    <a href="#thumb-61" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-61" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-48.jpg" alt="Summer schist installation 48">
   </div>
   <div id="img-62" class="lightbox">
-    <a href="#thumb-62" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-62" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-49.jpg" alt="Summer schist installation 49">
   </div>
   <div id="img-63" class="lightbox">
-    <a href="#thumb-63" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-63" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-50.jpg" alt="Summer schist installation 50">
   </div>
   <div id="img-64" class="lightbox">
-    <a href="#thumb-64" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-64" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-51.jpg" alt="Summer schist installation 51">
   </div>
   <div id="img-65" class="lightbox">
-    <a href="#thumb-65" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-65" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-52.jpg" alt="Summer schist installation 52">
   </div>
   <div id="img-66" class="lightbox">
-    <a href="#thumb-66" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-66" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-53.jpg" alt="Summer schist installation 53">
   </div>
   <div id="img-67" class="lightbox">
-    <a href="#thumb-67" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-67" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-54.jpg" alt="Summer schist installation 54">
   </div>
   <div id="img-68" class="lightbox">
-    <a href="#thumb-68" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-68" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-55.jpg" alt="Summer schist installation 55">
   </div>
   <div id="img-69" class="lightbox">
-    <a href="#thumb-69" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-69" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-56.jpg" alt="Summer schist installation 56">
   </div>
   <div id="img-70" class="lightbox">
-    <a href="#thumb-70" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-70" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-57.jpg" alt="Summer schist installation 57">
   </div>
   <div id="img-71" class="lightbox">
-    <a href="#thumb-71" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-71" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-58.jpg" alt="Summer schist installation 58">
   </div>
   <div id="img-72" class="lightbox">
-    <a href="#thumb-72" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-72" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-59.jpg" alt="Summer schist installation 59">
   </div>
   <div id="img-73" class="lightbox">
-    <a href="#thumb-73" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-73" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-60.jpg" alt="Summer schist installation 60">
   </div>
   <div id="img-74" class="lightbox">
-    <a href="#thumb-74" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-74" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-61.jpg" alt="Summer schist installation 61">
   </div>
   <div id="img-75" class="lightbox">
-    <a href="#thumb-75" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-75" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-62.jpg" alt="Summer schist installation 62">
   </div>
   <div id="img-76" class="lightbox">
-    <a href="#thumb-76" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-76" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-63.jpg" alt="Summer schist installation 63">
   </div>
   <div id="img-77" class="lightbox">
-    <a href="#thumb-77" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-77" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-64.jpg" alt="Summer schist installation 64">
   </div>
   <div id="img-78" class="lightbox">
-    <a href="#thumb-78" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-78" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-65.jpg" alt="Summer schist installation 65">
   </div>
   <div id="img-79" class="lightbox">
-    <a href="#thumb-79" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-79" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-66.jpg" alt="Summer schist installation 66">
   </div>
   <div id="img-80" class="lightbox">
-    <a href="#thumb-80" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-80" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-67.jpg" alt="Summer schist installation 67">
   </div>
   <div id="img-81" class="lightbox">
-    <a href="#thumb-81" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-81" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-68.jpg" alt="Summer schist installation 68">
   </div>
   <div id="img-82" class="lightbox">
-    <a href="#thumb-82" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-82" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-69.jpg" alt="Summer schist installation 69">
   </div>
   <div id="img-83" class="lightbox">
-    <a href="#thumb-83" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-83" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-70.jpg" alt="Summer schist installation 70">
   </div>
   <div id="img-84" class="lightbox">
-    <a href="#thumb-84" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-84" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-71.jpg" alt="Summer schist installation 71">
   </div>
   <div id="img-85" class="lightbox">
-    <a href="#thumb-85" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-85" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-72.jpg" alt="Summer schist installation 72">
   </div>
   <div id="img-86" class="lightbox">
-    <a href="#thumb-86" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-86" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-73.jpg" alt="Summer schist installation 73">
   </div>
   <div id="img-87" class="lightbox">
-    <a href="#thumb-87" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-87" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-74.jpg" alt="Summer schist installation 74">
   </div>
   <div id="img-88" class="lightbox">
-    <a href="#thumb-88" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-88" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-75.jpg" alt="Summer schist installation 75">
   </div>
   <div id="img-89" class="lightbox">
-    <a href="#thumb-89" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-89" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-76.jpg" alt="Summer schist installation 76">
   </div>
   <div id="img-90" class="lightbox">
-    <a href="#thumb-90" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-90" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-77.jpg" alt="Summer schist installation 77">
   </div>
   <div id="img-91" class="lightbox">
-    <a href="#thumb-91" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-91" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-78.jpg" alt="Summer schist installation 78">
   </div>
   <div id="img-92" class="lightbox">
-    <a href="#thumb-92" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-92" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-79.jpg" alt="Summer schist installation 79">
   </div>
   <div id="img-93" class="lightbox">
-    <a href="#thumb-93" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-93" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-80.jpg" alt="Summer schist installation 80">
   </div>
   <div id="img-94" class="lightbox">
-    <a href="#thumb-94" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-94" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-81.jpg" alt="Summer schist installation 81">
   </div>
   <div id="img-95" class="lightbox">
-    <a href="#thumb-95" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-95" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-82.jpg" alt="Summer schist installation 82">
   </div>
   <div id="img-96" class="lightbox">
-    <a href="#thumb-96" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-96" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-83.jpg" alt="Summer schist installation 83">
   </div>
   <div id="img-97" class="lightbox">
-    <a href="#thumb-97" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-97" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-84.jpg" alt="Summer schist installation 84">
   </div>
   <div id="img-98" class="lightbox">
-    <a href="#thumb-98" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-98" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-85.jpg" alt="Summer schist installation 85">
   </div>
   <div id="img-99" class="lightbox">
-    <a href="#thumb-99" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-99" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-86.jpg" alt="Summer schist installation 86">
   </div>
   <div id="img-100" class="lightbox">
-    <a href="#thumb-100" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-100" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-87.jpg" alt="Summer schist installation 87">
   </div>
   <div id="img-101" class="lightbox">
-    <a href="#thumb-101" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-101" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-88.jpg" alt="Summer schist installation 88">
   </div>
   <div id="img-102" class="lightbox">
-    <a href="#thumb-102" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-102" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-89.jpg" alt="Summer schist installation 89">
   </div>
   <div id="img-103" class="lightbox">
-    <a href="#thumb-103" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-103" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-90.jpg" alt="Summer schist installation 90">
   </div>
   <div id="img-104" class="lightbox">
-    <a href="#thumb-104" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-104" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-91.jpg" alt="Summer schist installation 91">
   </div>
   <div id="img-105" class="lightbox">
-    <a href="#thumb-105" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-105" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-92.jpg" alt="Summer schist installation 92">
   </div>
   <div id="img-106" class="lightbox">
-    <a href="#thumb-106" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-106" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-93.jpg" alt="Summer schist installation 93">
   </div>
   <div id="img-107" class="lightbox">
-    <a href="#thumb-107" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-107" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-94.jpg" alt="Summer schist installation 94">
   </div>
   <div id="img-108" class="lightbox">
-    <a href="#thumb-108" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-108" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-95.jpg" alt="Summer schist installation 95">
   </div>
   <div id="img-109" class="lightbox">
-    <a href="#thumb-109" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-109" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-96.jpg" alt="Summer schist installation 96">
   </div>
   <div id="img-110" class="lightbox">
-    <a href="#thumb-110" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-110" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-97.jpg" alt="Summer schist installation 97">
   </div>
   <div id="img-111" class="lightbox">
-    <a href="#thumb-111" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-111" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-98.jpg" alt="Summer schist installation 98">
   </div>
   <div id="img-112" class="lightbox">
-    <a href="#thumb-112" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-112" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-99.jpg" alt="Summer schist installation 99">
   </div>
   <div id="img-113" class="lightbox">
-    <a href="#thumb-113" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-113" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-100.jpg" alt="Summer schist installation 100">
   </div>
   <div id="img-114" class="lightbox">
-    <a href="#thumb-114" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-114" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-101.jpg" alt="Summer schist installation 101">
   </div>
   <div id="img-115" class="lightbox">
-    <a href="#thumb-115" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-115" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-102.jpg" alt="Summer schist installation 102">
   </div>
   <div id="img-116" class="lightbox">
-    <a href="#thumb-116" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-116" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-103.jpg" alt="Summer schist installation 103">
   </div>
   <div id="img-117" class="lightbox">
-    <a href="#thumb-117" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-117" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-104.jpg" alt="Summer schist installation 104">
   </div>
   <div id="img-118" class="lightbox">
-    <a href="#thumb-118" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-118" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-105.jpg" alt="Summer schist installation 105">
   </div>
   <div id="img-119" class="lightbox">
-    <a href="#thumb-119" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-119" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-106.jpg" alt="Summer schist installation 106">
   </div>
   <div id="img-120" class="lightbox">
-    <a href="#thumb-120" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-120" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-107.jpg" alt="Summer schist installation 107">
   </div>
   <div id="img-121" class="lightbox">
-    <a href="#thumb-121" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-121" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-108.jpg" alt="Summer schist installation 108">
   </div>
   <div id="img-122" class="lightbox">
-    <a href="#thumb-122" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-122" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-109.jpg" alt="Summer schist installation 109">
   </div>
   <div id="img-123" class="lightbox">
-    <a href="#thumb-123" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-123" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-110.jpg" alt="Summer schist installation 110">
   </div>
   <div id="img-124" class="lightbox">
-    <a href="#thumb-124" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-124" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-111.jpg" alt="Summer schist installation 111">
   </div>
   <div id="img-125" class="lightbox">
-    <a href="#thumb-125" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-125" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-112.jpg" alt="Summer schist installation 112">
   </div>
   <div id="img-126" class="lightbox">
-    <a href="#thumb-126" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-126" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-113.jpg" alt="Summer schist installation 113">
   </div>
   <div id="img-127" class="lightbox">
-    <a href="#thumb-127" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-127" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-114.jpg" alt="Summer schist installation 114">
   </div>
   <div id="img-128" class="lightbox">
-    <a href="#thumb-128" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-128" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-115.jpg" alt="Summer schist installation 115">
   </div>
   <div id="img-129" class="lightbox">
-    <a href="#thumb-129" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-129" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-116.jpg" alt="Summer schist installation 116">
   </div>
   <div id="img-130" class="lightbox">
-    <a href="#thumb-130" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-130" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-117.jpg" alt="Summer schist installation 117">
   </div>
   <div id="img-131" class="lightbox">
-    <a href="#thumb-131" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-131" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-118.jpg" alt="Summer schist installation 118">
   </div>
   <div id="img-132" class="lightbox">
-    <a href="#thumb-132" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-132" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-119.jpg" alt="Summer schist installation 119">
   </div>
   <div id="img-133" class="lightbox">
-    <a href="#thumb-133" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-133" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-120.jpg" alt="Summer schist installation 120">
   </div>
   <div id="img-134" class="lightbox">
-    <a href="#thumb-134" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-134" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-121.jpg" alt="Summer schist installation 121">
   </div>
   <div id="img-135" class="lightbox">
-    <a href="#thumb-135" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-135" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-122.jpg" alt="Summer schist installation 122">
   </div>
   <div id="img-136" class="lightbox">
-    <a href="#thumb-136" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-136" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-123.jpg" alt="Summer schist installation 123">
   </div>
   <div id="img-137" class="lightbox">
-    <a href="#thumb-137" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-137" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-124.jpg" alt="Summer schist installation 124">
   </div>
   <div id="img-138" class="lightbox">
-    <a href="#thumb-138" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-138" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-125.jpg" alt="Summer schist installation 125">
   </div>
   <div id="img-139" class="lightbox">
-    <a href="#thumb-139" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-139" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-126.jpg" alt="Summer schist installation 126">
   </div>
   <div id="img-140" class="lightbox">
-    <a href="#thumb-140" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-140" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-127.jpg" alt="Summer schist installation 127">
   </div>
   <div id="img-141" class="lightbox">
-    <a href="#thumb-141" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-141" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-128.jpg" alt="Summer schist installation 128">
   </div>
   <div id="img-142" class="lightbox">
-    <a href="#thumb-142" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-142" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-129.jpg" alt="Summer schist installation 129">
   </div>
   <div id="img-143" class="lightbox">
-    <a href="#thumb-143" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-143" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-130.jpg" alt="Summer schist installation 130">
   </div>
   <div id="img-144" class="lightbox">
-    <a href="#thumb-144" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-144" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-131.jpg" alt="Summer schist installation 131">
   </div>
   <div id="img-145" class="lightbox">
-    <a href="#thumb-145" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-145" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-132.jpg" alt="Summer schist installation 132">
   </div>
   <div id="img-146" class="lightbox">
-    <a href="#thumb-146" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-146" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-133.jpg" alt="Summer schist installation 133">
   </div>
   <div id="img-147" class="lightbox">
-    <a href="#thumb-147" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-147" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-134.jpg" alt="Summer schist installation 134">
   </div>
   <div id="img-148" class="lightbox">
-    <a href="#thumb-148" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-148" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-135.jpg" alt="Summer schist installation 135">
   </div>
   <div id="img-149" class="lightbox">
-    <a href="#thumb-149" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-149" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-136.jpg" alt="Summer schist installation 136">
   </div>
   <div id="img-150" class="lightbox">
-    <a href="#thumb-150" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-150" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-137.jpg" alt="Summer schist installation 137">
   </div>
   <div id="img-151" class="lightbox">
-    <a href="#thumb-151" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-151" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-138.jpg" alt="Summer schist installation 138">
   </div>
   <div id="img-152" class="lightbox">
-    <a href="#thumb-152" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-152" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-139.jpg" alt="Summer schist installation 139">
   </div>
   <div id="img-153" class="lightbox">
-    <a href="#thumb-153" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-153" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-140.jpg" alt="Summer schist installation 140">
   </div>
   <div id="img-154" class="lightbox">
-    <a href="#thumb-154" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-154" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-141.jpg" alt="Summer schist installation 141">
   </div>
   <div id="img-155" class="lightbox">
-    <a href="#thumb-155" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-155" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-142.jpg" alt="Summer schist installation 142">
   </div>
   <div id="img-156" class="lightbox">
-    <a href="#thumb-156" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-156" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-143.jpg" alt="Summer schist installation 143">
   </div>
   <div id="img-157" class="lightbox">
-    <a href="#thumb-157" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-157" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-144.jpg" alt="Summer schist installation 144">
   </div>
   <div id="img-158" class="lightbox">
-    <a href="#thumb-158" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-158" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-145.jpg" alt="Summer schist installation 145">
   </div>
   <div id="img-159" class="lightbox">
-    <a href="#thumb-159" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-159" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-146.jpg" alt="Summer schist installation 146">
   </div>
   <div id="img-160" class="lightbox">
-    <a href="#thumb-160" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-160" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-147.jpg" alt="Summer schist installation 147">
   </div>
   <div id="img-161" class="lightbox">
-    <a href="#thumb-161" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-161" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-148.jpg" alt="Summer schist installation 148">
   </div>
   <div id="img-162" class="lightbox">
-    <a href="#thumb-162" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-162" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-149.jpg" alt="Summer schist installation 149">
   </div>
   <div id="img-163" class="lightbox">
-    <a href="#thumb-163" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-163" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-150.jpg" alt="Summer schist installation 150">
   </div>
   <div id="img-164" class="lightbox">
-    <a href="#thumb-164" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-164" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-151.jpg" alt="Summer schist installation 151">
   </div>
   <div id="img-165" class="lightbox">
-    <a href="#thumb-165" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-165" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-152.jpg" alt="Summer schist installation 152">
   </div>
   <div id="img-166" class="lightbox">
-    <a href="#thumb-166" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-166" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-153.jpg" alt="Summer schist installation 153">
   </div>
   <div id="img-167" class="lightbox">
-    <a href="#thumb-167" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-167" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-154.jpg" alt="Summer schist installation 154">
   </div>
   <div id="img-168" class="lightbox">
-    <a href="#thumb-168" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-168" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-155.jpg" alt="Summer schist installation 155">
   </div>
   <div id="img-169" class="lightbox">
-    <a href="#thumb-169" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-169" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-156.jpg" alt="Winter schist installation 156">
   </div>
   <div id="img-170" class="lightbox">
-    <a href="#thumb-170" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-170" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-157.jpg" alt="Winter schist installation 157">
   </div>
   <div id="img-171" class="lightbox">
-    <a href="#thumb-171" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-171" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-158.jpg" alt="Winter schist installation 158">
   </div>
   <div id="img-172" class="lightbox">
-    <a href="#thumb-172" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-172" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-159.jpg" alt="Winter schist installation 159">
   </div>
   <div id="img-173" class="lightbox">
-    <a href="#thumb-173" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-173" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-160.jpg" alt="Winter schist installation 160">
   </div>
   <div id="img-174" class="lightbox">
-    <a href="#thumb-174" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-174" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-161.jpg" alt="Winter schist installation 161">
   </div>
   <div id="img-175" class="lightbox">
-    <a href="#thumb-175" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-175" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-162.jpg" alt="Winter schist installation 162">
   </div>
   <div id="img-176" class="lightbox">
-    <a href="#thumb-176" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-176" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-163.jpg" alt="Winter schist installation 163">
   </div>
   <div id="img-177" class="lightbox">
-    <a href="#thumb-177" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-177" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-164.jpg" alt="Winter schist installation 164">
   </div>
   <div id="img-178" class="lightbox">
-    <a href="#thumb-178" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-178" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-165.jpg" alt="Winter schist installation 165">
   </div>
   <div id="img-179" class="lightbox">
-    <a href="#thumb-179" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-179" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-166.jpg" alt="Winter schist installation 166">
   </div>
   <div id="img-180" class="lightbox">
-    <a href="#thumb-180" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-180" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-167.jpg" alt="Winter schist installation 167">
   </div>
   <div id="img-181" class="lightbox">
-    <a href="#thumb-181" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-181" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-168.jpg" alt="Winter schist installation 168">
   </div>
   <div id="img-182" class="lightbox">
-    <a href="#thumb-182" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-182" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-169.jpg" alt="Winter schist installation 169">
   </div>
   <div id="img-183" class="lightbox">
-    <a href="#thumb-183" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-183" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-170.jpg" alt="Winter schist installation 170">
   </div>
   <div id="img-184" class="lightbox">
-    <a href="#thumb-184" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-184" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-171.jpg" alt="Winter schist installation 171">
   </div>
   <div id="img-185" class="lightbox">
-    <a href="#thumb-185" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-185" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-172.jpg" alt="Winter schist installation 172">
   </div>
   <div id="img-186" class="lightbox">
-    <a href="#thumb-186" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-186" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-173.jpg" alt="Winter schist installation 173">
   </div>
   <div id="img-187" class="lightbox">
-    <a href="#thumb-187" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-187" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-174.jpg" alt="Winter schist installation 174">
   </div>
   <div id="img-188" class="lightbox">
-    <a href="#thumb-188" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-188" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-175.jpg" alt="Winter schist installation 175">
   </div>
   <div id="img-189" class="lightbox">
-    <a href="#thumb-189" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-189" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-176.jpg" alt="Winter schist installation 176">
   </div>
   <div id="img-190" class="lightbox">
-    <a href="#thumb-190" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-190" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-177.jpg" alt="Winter schist installation 177">
   </div>
   <div id="img-191" class="lightbox">
-    <a href="#thumb-191" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-191" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-178.jpg" alt="Winter schist installation 178">
   </div>
   <div id="img-192" class="lightbox">
-    <a href="#thumb-192" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-192" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-179.jpg" alt="Winter schist installation 179">
   </div>
   <div id="img-193" class="lightbox">
-    <a href="#thumb-193" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-193" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-180.jpg" alt="Winter schist installation 180">
   </div>
   <div id="img-194" class="lightbox">
-    <a href="#thumb-194" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-194" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-181.jpg" alt="Winter schist installation 181">
   </div>
   <div id="img-195" class="lightbox">
-    <a href="#thumb-195" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-195" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-182.jpg" alt="Frost on site, Arrowtown winter morning">
   </div>
   <div id="img-196" class="lightbox">
-    <a href="#thumb-196" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-196" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-183.jpg" alt="Ice crystals on windscreen, Arrowtown winter">
   </div>
   <div id="img-197" class="lightbox">
-    <a href="#thumb-197" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-197" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-185.jpg" alt="Morning frost macro, Arrowtown winter">
   </div>
   <div id="img-198" class="lightbox">
-    <a href="#thumb-198" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-198" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-186.jpg" alt="Frost detail on site, Arrowtown winter">
   </div>
   <div id="img-199" class="lightbox">
-    <a href="#thumb-199" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-199" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-200.jpg" alt="Winter schist installation 200">
   </div>
   <div id="img-200" class="lightbox">
-    <a href="#thumb-200" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-200" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-201.jpg" alt="Winter schist installation 201">
   </div>
   <div id="img-201" class="lightbox">
-    <a href="#thumb-201" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-201" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-205.jpg" alt="Winter schist installation 205">
   </div>
   <div id="img-202" class="lightbox">
-    <a href="#thumb-202" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-202" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-206.jpg" alt="Winter schist installation 206">
   </div>
   <div id="img-203" class="lightbox">
-    <a href="#thumb-203" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-203" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-207.jpg" alt="Winter schist installation 207">
   </div>
   <div id="img-204" class="lightbox">
-    <a href="#thumb-204" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-204" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-209.jpg" alt="Winter schist installation 209">
   </div>
   <div id="img-205" class="lightbox">
-    <a href="#thumb-205" class="lightbox-close" aria-label="Close">&times;</a>
+    <a href="#thumb-205" class="lightbox-close" aria-label="Close">CLOSE <span class="close-x">&times;</span></a>
     <img src="arrowtown-os-grey-schist-showcase-210.jpg" alt="Winter schist installation 210">
   </div>
 
@@ -2549,6 +2617,77 @@ Installed on SAMv&trade; (Sumner Adhered Masonry veneer) System</div>
         catch(e) { /* silent */ }
         document.body.removeChild(ta);
       }
+
+      /* ── Lightbox navigation ── */
+      var lightboxIds = [];
+      document.querySelectorAll('.lightbox').forEach(function(lb) {
+        lightboxIds.push(lb.id);
+      });
+
+      var prevBtn = document.createElement('button');
+      prevBtn.className = 'lightbox-nav lightbox-nav--prev';
+      prevBtn.innerHTML = '&#8249;';
+      prevBtn.setAttribute('aria-label', 'Previous image');
+      document.body.appendChild(prevBtn);
+
+      var nextBtn = document.createElement('button');
+      nextBtn.className = 'lightbox-nav lightbox-nav--next';
+      nextBtn.innerHTML = '&#8250;';
+      nextBtn.setAttribute('aria-label', 'Next image');
+      document.body.appendChild(nextBtn);
+
+      function getLightboxIndex() {
+        var hash = window.location.hash.slice(1);
+        return lightboxIds.indexOf(hash);
+      }
+
+      function showNav(visible) {
+        var d = visible ? 'flex' : 'none';
+        prevBtn.style.display = d;
+        nextBtn.style.display = d;
+      }
+
+      function navigateLightbox(dir) {
+        var idx = getLightboxIndex();
+        if (idx === -1) return;
+        var next = (idx + dir + lightboxIds.length) % lightboxIds.length;
+        var currentImg = document.getElementById(lightboxIds[idx]).querySelector('img');
+        currentImg.style.transition = 'opacity 120ms ease, transform 120ms ease';
+        currentImg.style.opacity = '0';
+        currentImg.style.transform = 'scale(0.96)';
+        setTimeout(function() {
+          currentImg.style.transition = '';
+          currentImg.style.opacity = '';
+          currentImg.style.transform = '';
+          window.location.hash = '#' + lightboxIds[next];
+        }, 120);
+      }
+
+      prevBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        navigateLightbox(-1);
+      });
+
+      nextBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        navigateLightbox(1);
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (getLightboxIndex() === -1) return;
+        if (e.key === 'ArrowLeft')  { e.preventDefault(); navigateLightbox(-1); }
+        if (e.key === 'ArrowRight') { e.preventDefault(); navigateLightbox(1); }
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          var current = document.getElementById(lightboxIds[getLightboxIndex()]);
+          var close = current.querySelector('.lightbox-close');
+          if (close) window.location.hash = close.getAttribute('href');
+        }
+      });
+
+      function checkLightbox() { showNav(getLightboxIndex() !== -1); }
+      window.addEventListener('hashchange', checkLightbox);
+      checkLightbox();
     });
   </script>
 </body>
