@@ -212,6 +212,524 @@
       }
     }
 
+    /* ── Overview Cards ── */
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 64px 16px 0;
+    }
+
+    .overview-card {
+      background: #fff;
+      padding: 32px;
+      border-left: 4px solid #c4a77d;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border-radius: 8px;
+    }
+
+    .overview-card h3 {
+      color: #1a1a1a;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .overview-card p {
+      color: #555;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    /* ── Stats ── */
+
+    .stats-section {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 64px 24px;
+      margin-top: 64px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 48px;
+      text-align: center;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .stat-item {
+      padding: 24px;
+    }
+
+    .stat-number {
+      font-size: 36px;
+      font-weight: 300;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .stat-number span {
+      color: #c4a77d;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #8b8680;
+      font-weight: 500;
+    }
+
+    /* ── Prose ── */
+
+    .prose {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
+
+    .prose p {
+      color: #555;
+      font-size: 17px;
+      line-height: 1.9;
+      margin-bottom: 24px;
+    }
+
+    .prose p:last-child {
+      margin-bottom: 0;
+    }
+
+    .story-highlight {
+      background: #f8f7f5;
+      border-left: 4px solid #c4a77d;
+      padding: 24px;
+      margin: 32px 0;
+      font-style: italic;
+      color: #1a1a1a;
+      border-radius: 4px;
+      font-size: 17px;
+      line-height: 1.9;
+    }
+
+    @media (max-width: 640px) {
+      .overview-grid {
+        padding: 32px 12px 0;
+        gap: 16px;
+      }
+
+      .overview-card {
+        padding: 24px;
+      }
+
+      .stats-section {
+        padding: 48px 16px;
+        margin-top: 48px;
+      }
+
+      .stat-number {
+        font-size: 28px;
+      }
+
+      .prose {
+        padding: 48px 16px;
+      }
+
+      .prose p,
+      .story-highlight {
+        font-size: 16px;
+      }
+    }
+
+
+    /* ── Installation Tabs ── */
+
+    .tab-bar {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 24px 16px 0;
+      display: flex;
+      gap: 10px;
+    }
+
+    .tab-bar [role="tab"] {
+      all: unset;
+      cursor: pointer;
+      padding: 10px 22px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #555;
+      background: transparent;
+      border: 1px solid #b0b0b0;
+      border-radius: 999px;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+      box-sizing: border-box;
+    }
+
+    .tab-bar [role="tab"]:hover {
+      border-color: #888;
+      color: #333;
+      background: rgba(0,0,0,0.04);
+    }
+
+    .tab-bar [role="tab"]:focus-visible {
+      outline: 2px solid #c4a77d;
+      outline-offset: 3px;
+    }
+
+    .tab-bar [role="tab"][aria-selected="true"] {
+      color: #1a1a1a;
+      font-weight: 600;
+      border-color: #1a1a1a;
+      background: #f0efec;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.12);
+    }
+
+    .tab-bar [role="tab"][aria-selected="true"]:hover {
+      background: #eae9e6;
+    }
+
+    /* ── Panel fade ── */
+
+    [role="tabpanel"] {
+      animation: fadeIn 200ms ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    .tab-instruction {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 10px 16px 0;
+      font-size: 14px;
+      color: #999;
+    }
+
+    .tab-bar .tab-icon {
+      font-size: 1.1em;
+      line-height: 1;
+    }
+
+    .tab-bar .tab-count {
+      font-weight: 400;
+      color: inherit;
+      opacity: 0.6;
+      font-size: 0.85em;
+    }
+
+    /* ── Tab Blurb ── */
+
+    .tab-blurb {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px 16px 0;
+    }
+
+    .tab-blurb-title {
+      font-size: 17px;
+      font-weight: 500;
+      color: #333;
+      margin: 0;
+    }
+
+    .tab-blurb-sub {
+      font-size: 15px;
+      font-style: italic;
+      color: #888;
+      margin: 4px 0 0;
+    }
+
+    /* ── Image Counts ── */
+
+    .count {
+      font-weight: 400;
+      color: #999;
+      font-size: 0.6em;
+    }
+
+    .count:empty {
+      display: none;
+    }
+
+    /* ── Spec Section ── */
+
+    .spec-section {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .spec-card {
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .spec-left {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .spec-left img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      display: block;
+    }
+
+    .spec-caption {
+      font-size: 13px;
+      color: #999;
+      text-align: center;
+    }
+
+    .spec-right p {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.7;
+      margin: 0 0 24px;
+    }
+
+    .spec-block-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #999;
+      margin: 0 0 6px;
+    }
+
+    .spec-copy-wrap {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .spec-code {
+      background: #f5f4f1;
+      border: 1px solid #e0ddd8;
+      border-radius: 4px;
+      padding: 14px 56px 14px 16px;
+      font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+      font-size: 15px;
+      font-weight: 500;
+      color: #1a1a1a;
+      letter-spacing: 0.01em;
+      line-height: 1.6;
+      white-space: pre-line;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .spec-copy-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: none;
+      border: 1px solid #d0d0d0;
+      border-radius: 4px;
+      padding: 5px 8px;
+      cursor: pointer;
+      color: #888;
+      font-size: 13px;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: border-color 0.15s ease, color 0.15s ease;
+    }
+
+    .spec-copy-btn:hover {
+      border-color: #888;
+      color: #333;
+    }
+
+    .spec-copy-btn:focus-visible {
+      outline: 2px solid #c4a77d;
+      outline-offset: 2px;
+    }
+
+    .spec-helper {
+      font-size: 13px;
+      color: #999;
+      margin: 0 0 28px;
+      line-height: 1.5;
+    }
+
+    .spec-download {
+      display: inline-flex;
+      align-items: flex-start;
+      gap: 10px;
+      text-decoration: none;
+      color: #555;
+      transition: color 0.15s ease;
+      line-height: 1.4;
+    }
+
+    .spec-download:hover {
+      color: #1a1a1a;
+    }
+
+    .spec-download-icon {
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .spec-download-label {
+      font-size: 15px;
+      font-weight: 500;
+      color: inherit;
+    }
+
+    .spec-download-sub {
+      display: block;
+      font-size: 13px;
+      font-weight: 400;
+      color: #999;
+      margin-top: 2px;
+    }
+
+    @media (max-width: 640px) {
+      .spec-card {
+        grid-template-columns: 1fr;
+        padding: 24px;
+        gap: 24px;
+      }
+
+      .spec-left {
+        max-width: 220px;
+      }
+
+      .spec-code {
+        font-size: 14px;
+      }
+    }
+
+    /* ── Story Bullets ── */
+
+    .story-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 32px;
+    }
+
+    .story-bullets li {
+      color: #555;
+      font-size: 15px;
+      line-height: 1.7;
+      padding: 6px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .story-bullets li:last-child {
+      border-bottom: none;
+    }
+
+    .story-bullets strong {
+      color: #1a1a1a;
+    }
+
+    /* ── Accordion ── */
+
+    .story-accordion {
+      margin-top: 24px;
+    }
+
+    .story-accordion summary {
+      cursor: pointer;
+      color: #c4a77d;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 12px 0;
+      list-style: none;
+    }
+
+    .story-accordion summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .story-accordion summary::before {
+      content: '+ ';
+      font-weight: 300;
+    }
+
+    .story-accordion[open] summary::before {
+      content: '\2212  ';
+    }
+
+    .story-accordion .story-full {
+      padding-top: 16px;
+    }
+
+    .story-accordion .story-full p {
+      color: #555;
+      font-size: 17px;
+      line-height: 1.9;
+      margin-bottom: 24px;
+    }
+
+    .story-accordion .story-full p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 640px) {
+      .tab-bar {
+        padding: 20px 12px 0;
+        gap: 8px;
+      }
+
+      .tab-bar [role="tab"] {
+        padding: 10px 18px;
+        font-size: 14px;
+      }
+
+      .tab-blurb {
+        padding: 16px 12px 0;
+      }
+
+      .tab-blurb-title {
+        font-size: 15px;
+      }
+
+      .tab-blurb-sub {
+        font-size: 14px;
+      }
+
+      .tab-instruction {
+        padding: 8px 12px 0;
+        font-size: 13px;
+      }
+
+      .story-bullets li {
+        font-size: 14px;
+      }
+
+      .story-accordion summary::after {
+        content: " (optional)";
+      }
+
+      .story-accordion .story-full p {
+        font-size: 16px;
+      }
+    }
     /* ── Back to Top ── */
 
     .back-to-top {
@@ -303,14 +821,33 @@
     </div>
   </div>
 
+  <!-- ── Project Overview ── -->
+
+  <div class="overview-grid">
+    <div class="overview-card">
+      <h3>The Vision</h3>
+      <p>A 450m&sup2; architectural residence nestled between two prestigious golf courses, designed for extended family living with separate bedroom wings and a central entertaining hub. The clients chose OS-Grey Schist from our website gallery, seeking to integrate the natural landscape into their home.</p>
+    </div>
+    <div class="overview-card">
+      <h3>The Stone</h3>
+      <p>OS-Grey Local Schist with subtle earthen highlights was carefully selected and dry-stacked to create visual resting points along the home&rsquo;s fa&ccedil;ade. The stone panels beautifully break up the long-run metal, anchoring this substantial home to its dramatic landscape.</p>
+    </div>
+    <div class="overview-card">
+      <h3>The Craftsmanship</h3>
+      <p>Three skilled stone masons dedicated six months to this project, working through Central Otago&rsquo;s extreme seasons&mdash;from summer days reaching 29&deg;C to winter mornings at -6&deg;C. The result is exceptional dry-stack masonry with precision-fitted joints.</p>
+    </div>
+  </div>
+
+  <!-- FINISHED GALLERY START -->
+
   <!-- ── Finished Project ── -->
 
   <div class="section-heading">
-    <h2>Finished Project</h2>
-    <p>The completed Arrowtown residence &mdash; OS-Grey schist in its final setting.</p>
+    <h2>Finished Project <span class="count" id="finished-count"></span></h2>
+    <p><em>The completed residence &mdash; OS-Grey schist in its final setting.</em></p>
   </div>
 
-  <section class="gallery">
+  <section class="gallery" id="finished-gallery">
     <a href="#img-1" id="thumb-1">
       <img src="arrowtown-os-grey-schist-showcase-187.jpg" width="4032" height="3024" alt="Completed Arrowtown schist residence, wide exterior view" loading="lazy">
     </a>
@@ -352,16 +889,158 @@
     </a>
   </section>
 
-  <!-- ── Summer Installation ── -->
+  <!-- FINISHED GALLERY END -->
 
-  <div class="divider"><hr></div>
+  <!-- ── Statistics ── -->
+
+  <section class="stats-section">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-number">450m&sup2;</span>
+        <span class="stat-label">Home + Separate Garage</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">6</span>
+        <span class="stat-label">Months On Site</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Master Stone Masons</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">-6&deg;C <span>to</span> 29&deg;C</span>
+        <span class="stat-label">Working Conditions</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── How to Specify ── -->
 
   <div class="section-heading">
-    <h2>Summer Installation</h2>
-    <p>Warm-weather stonework &mdash; laying the first courses under Central Otago sun.</p>
+    <h2>How to Specify This Schist</h2>
   </div>
 
-  <section class="gallery">
+  <div class="spec-section">
+    <div class="spec-card">
+      <div class="spec-left">
+        <a href="#img-150">
+          <img src="arrowtown-os-grey-schist-showcase-137.jpg" width="4032" height="3024" alt="OS-Grey schist veneer wall detail" loading="lazy">
+        </a>
+        <p class="spec-caption">OS-Grey-HH on SAMv&trade; System</p>
+      </div>
+      <div class="spec-right">
+        <p>This finished stone masonry aesthetic can be delivered anywhere in New Zealand using our adhered masonry system.</p>
+
+        <p class="spec-block-label">Product (copy)</p>
+        <div class="spec-copy-wrap">
+          <div class="spec-code" id="spec-product">OS-Grey-HH Schist Veneer</div>
+          <button class="spec-copy-btn" type="button" data-target="spec-product" aria-label="Copy product text">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5.5" y="5.5" width="9" height="9" rx="1.5"/><path d="M5.5 10.5h-1a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v1"/></svg>
+            <span class="spec-copy-label">Copy</span>
+          </button>
+        </div>
+
+        <p class="spec-block-label">Specification (copy)</p>
+        <div class="spec-copy-wrap">
+          <div class="spec-code" id="spec-specification">OS-Grey-HH Schist Veneer
+Installed on SAMv&trade; (Sumner Adhered Masonry veneer) System</div>
+          <button class="spec-copy-btn" type="button" data-target="spec-specification" aria-label="Copy specification text">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5.5" y="5.5" width="9" height="9" rx="1.5"/><path d="M5.5 10.5h-1a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v1"/></svg>
+            <span class="spec-copy-label">Copy</span>
+          </button>
+        </div>
+
+        <p class="spec-helper">Use this wording verbatim in architectural and construction documentation.</p>
+
+        <a class="spec-download" href="SPEC_LINK_PLACEHOLDER.pdf">
+          <svg class="spec-download-icon" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17h12"/><path d="M10 3v10m0 0l-3.5-3.5M10 13l3.5-3.5"/></svg>
+          <span>
+            <span class="spec-download-label">Download Archi-Pack</span>
+            <span class="spec-download-sub">Typical details, system drawings, and appraisal documentation suitable for consent</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Story ── -->
+
+  <div class="section-heading">
+    <h2>The Story</h2>
+  </div>
+
+  <div class="prose">
+    <p>In February 2025, three stone masons began a six-month journey in Arrowtown, cladding a 450m&sup2; family estate in OS-Grey Schist. Working through Central Otago&rsquo;s extreme seasons&mdash;from 29&deg;C summer days to -6&deg;C winter mornings&mdash;they hand-selected and dry-stacked every stone.</p>
+
+    <ul class="story-bullets">
+      <li><strong>Timeline:</strong> Six months on site, February to August 2025</li>
+      <li><strong>Team:</strong> Three master stone masons, two living on-site in a caravan</li>
+      <li><strong>Climate:</strong> Summer days 6:30am&ndash;8:30pm; winter limited to 10am&ndash;3pm</li>
+      <li><strong>Stone:</strong> OS-Grey Local Schist, dry-stacked with tight precision joints</li>
+      <li><strong>Setting:</strong> Between two golf courses with mountain backdrop</li>
+      <li><strong>Client experience:</strong> Warm hospitality, tea and fresh pastries on site</li>
+    </ul>
+
+    <details class="story-accordion">
+      <summary>Read the full story</summary>
+      <div class="story-full">
+        <p>In February 2025, two of our stone masons arrived in Arrowtown, setting up a caravan on site that would be their home through summer&rsquo;s heat and winter&rsquo;s freeze. A third mason, living nearby, joined them each day. Together, they embarked on a journey that would span six months and four seasons.</p>
+
+        <div class="story-highlight">
+          &ldquo;Working with OS-Grey Schist in a dry-stacked format demands patience and precision. Each piece must be carefully selected, positioned, and fitted. We sourced additional stone throughout the project to ensure we could achieve the tight, seamless finish our clients deserved.&rdquo;
+        </div>
+
+        <p>The Central Otago climate tested both our team and the stone. Summer working days stretched from 6:30am to 8:30pm, taking advantage of long daylight hours while managing midday temperatures of 29&deg;C.</p>
+
+        <p>Winter brought a different challenge&mdash;mornings at -6&deg;C meant we could only work between 10am and 3pm, when conditions allowed for proper stone setting.</p>
+
+        <p>The property itself became part of the experience. Nestled between two golf courses with views across rolling hillocks and natural schist reefs, the site welcomed regular visitors&mdash;wild rabbits and quails who watched our progress with curiosity.</p>
+
+        <p>The clients were equally delightful, regularly inviting us for cups of tea or coffee, accompanied by fresh muffins or pastries. These moments of connection made the project truly special.</p>
+
+        <p>OS-Grey Schist, with its subtle grey and earthen tones, proved the perfect choice for this landscape. The stone&rsquo;s natural variation creates a living fa&ccedil;ade that shifts with the light&mdash;cool and serene in morning shadows, warm and textured in golden afternoon sun.</p>
+
+        <p>The dry-stack panels serve as visual anchors along the home&rsquo;s substantial elevation, breaking up the clean lines of long-run metal and grounding the architecture in its environment.</p>
+
+        <p>Dry-stacking schist to achieve tight, professional joints requires skill, experience, and an eye for how each stone will work with its neighbours. We hand-selected pieces throughout the project, sometimes sourcing additional material to ensure quality was never compromised. The result is masonry work we&rsquo;re genuinely proud of&mdash;a finish that honours both the stone and the clients&rsquo; vision.</p>
+
+        <p>The photographs here capture that progression&mdash;from raw landscape and first courses through to the completed residence, a 450m&sup2; family estate that feels both substantial and sensitive, modern yet timeless.</p>
+
+        <div class="story-highlight">
+          &ldquo;This is a very special, private place. A treat and a retreat. We would gladly work with these clients again, and we know they will enjoy this wonderful home for years to come.&rdquo;
+        </div>
+
+        <p>For us at Original Stone, this project represents everything we value: quality craftsmanship, client relationships built on trust and respect, and stone masonry that will endure for generations.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- INSTALLATION GALLERY START -->
+
+  <div class="section-heading">
+    <h2>Installation Gallery <span class="count" id="installation-count"></span></h2>
+    <p><em>Six months of dedicated stonework across Central Otago&rsquo;s extreme seasons.</em></p>
+    <p class="tab-instruction">Select a season to view the installation photos.</p>
+  </div>
+
+  <!-- INSTALLATION TABS START -->
+
+  <div class="tab-bar" role="tablist" aria-label="Installation season">
+    <button role="tab" id="tab-summer" aria-selected="false" aria-controls="panel-summer">
+      <span class="tab-icon">&#9788;</span> Summer <span class="tab-count" id="tab-summer-count"></span>
+    </button>
+    <button role="tab" id="tab-winter" aria-selected="true" aria-controls="panel-winter">
+      <span class="tab-icon">&#10052;</span> Winter <span class="tab-count" id="tab-winter-count"></span>
+    </button>
+  </div>
+
+  <div class="tab-blurb" aria-live="polite">
+    <p class="tab-blurb-title" id="tab-blurb-title">Winter Installation</p>
+    <p class="tab-blurb-sub" id="tab-blurb-sub">Snow on the ranges, frost on the tools &mdash; stonework through the Otago winter.</p>
+  </div>
+
+  <div id="panel-summer" role="tabpanel" aria-labelledby="tab-summer" hidden>
+    <section class="gallery" id="summer-gallery">
     <a href="#img-14" id="thumb-14">
       <img src="arrowtown-os-grey-schist-showcase-1.jpg" width="4032" height="3024" alt="Summer schist installation 1" loading="lazy">
     </a>
@@ -829,16 +1508,10 @@
     </a>
   </section>
 
-  <!-- ── Winter Installation ── -->
-
-  <div class="divider"><hr></div>
-
-  <div class="section-heading">
-    <h2>Winter Installation</h2>
-    <p>Snow on the ranges, frost on the tools &mdash; stonework through the Otago winter.</p>
   </div>
 
-  <section class="gallery">
+  <div id="panel-winter" role="tabpanel" aria-labelledby="tab-winter">
+    <section class="gallery" id="winter-gallery">
     <a href="#img-169" id="thumb-169">
       <img src="arrowtown-os-grey-schist-showcase-156.jpg" width="4032" height="3024" alt="Winter schist installation 156" loading="lazy">
     </a>
@@ -951,6 +1624,11 @@
       <img src="arrowtown-os-grey-schist-showcase-210.jpg" width="864" height="1184" alt="Winter schist installation 210" loading="lazy">
     </a>
   </section>
+  </div>
+
+  <!-- INSTALLATION TABS END -->
+
+  <!-- INSTALLATION GALLERY END -->
 
   <!-- ── CTA ── -->
 
@@ -1790,5 +2468,88 @@
   <!-- ── Back to Top ── -->
   <a href="#top" class="back-to-top" aria-label="Back to top">&#8593;</a>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      /* ── Image counts ── */
+      var finished = document.querySelectorAll('#finished-gallery img').length;
+      var summer = document.querySelectorAll('#summer-gallery img').length;
+      var winter = document.querySelectorAll('#winter-gallery img').length;
+
+      document.getElementById('finished-count').textContent = '(' + finished + ' images)';
+      document.getElementById('installation-count').textContent = '(' + (summer + winter) + ' images)';
+      document.getElementById('tab-summer-count').textContent = '(' + summer + ')';
+      document.getElementById('tab-winter-count').textContent = '(' + winter + ')';
+
+      /* ── Tab switching ── */
+      var tabs = document.querySelectorAll('[role="tablist"] [role="tab"]');
+      var panels = {
+        'tab-summer': document.getElementById('panel-summer'),
+        'tab-winter': document.getElementById('panel-winter')
+      };
+      var blurbs = {
+        'tab-summer': { title: 'Summer Installation', sub: 'Warm-weather stonework \u2014 laying the first courses under Central Otago sun.' },
+        'tab-winter': { title: 'Winter Installation', sub: 'Snow on the ranges, frost on the tools \u2014 stonework through the Otago winter.' }
+      };
+      var blurbTitle = document.getElementById('tab-blurb-title');
+      var blurbSub = document.getElementById('tab-blurb-sub');
+
+      function switchTab(tab) {
+        tabs.forEach(function(t) {
+          t.setAttribute('aria-selected', 'false');
+          panels[t.id].hidden = true;
+        });
+        tab.setAttribute('aria-selected', 'true');
+        var panel = panels[tab.id];
+        panel.hidden = false;
+        /* Re-trigger fade animation */
+        panel.style.animation = 'none';
+        panel.offsetHeight; /* force reflow */
+        panel.style.animation = '';
+        blurbTitle.textContent = blurbs[tab.id].title;
+        blurbSub.textContent = blurbs[tab.id].sub;
+      }
+
+      tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() { switchTab(tab); });
+      });
+
+      /* Default to Winter tab */
+      switchTab(document.getElementById('tab-winter'));
+
+      /* ── Copy buttons ── */
+      document.querySelectorAll('.spec-copy-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var target = document.getElementById(btn.getAttribute('data-target'));
+          var text = target.textContent;
+          var label = btn.querySelector('.spec-copy-label');
+
+          function showCopied() {
+            label.textContent = 'Copied';
+            setTimeout(function() { label.textContent = 'Copy'; }, 1500);
+          }
+
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(showCopied).catch(function() {
+              fallbackCopy(text, showCopied);
+            });
+          } else {
+            fallbackCopy(text, showCopied);
+          }
+        });
+      });
+
+      function fallbackCopy(text, onSuccess) {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); onSuccess(); }
+        catch(e) { /* silent */ }
+        document.body.removeChild(ta);
+      }
+    });
+  </script>
 </body>
 </html>
